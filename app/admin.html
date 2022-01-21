@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DashboardApp">
+
+<head>
+  <title>SPARK SCHOOL</title>
+  <!-- custom-theme -->
+  <base href="/admin.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link type="text/css" rel="icon" href="shared/images/appletsoftware.png" />
+  <script type="application/x-javascript">
+    addEventListener("load", function () {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+  </script>
+  <!-- //custom-theme -->
+  <link href="shared/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="shared/css/component.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="shared/css/export.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="shared/css/flipclock.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="shared/css/circles.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="shared/css/style_grid.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="shared/css/style-dash.css" rel="stylesheet" type="text/css" media="all" />
+
+  <link rel="stylesheet" type="text/css" href="shared/css/table-style.css" />
+  <link rel="stylesheet" type="text/css" href="shared/css/basictable.css" />
+  <link rel="stylesheet" href="shared/css/loading-bar.css">
+  <link rel="stylesheet" href="bower_components/angularjs-toaster/toaster.css">
+  <link rel="stylesheet" href="bower_components/angular-confirm/dist/angular-confirm.min.css">
+  <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+  <link rel="stylesheet" href="bower_components/angular-moment-picker/dist/angular-moment-picker.css">
+  <link rel="stylesheet" href="bower_components/video.js/dist/video-js.css" />
+  <!-- font-awesome-icons -->
+  <link href="shared/css/font-awesome-dash.css" rel="stylesheet">
+  <!-- //font-awesome-icons -->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+  <script type="text/javascript" src="shared/js/jquery-2.1.4.min.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <!-- Start AngularJS WorkStation -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angularjs-toaster/toaster.js"></script>
+  <script src="shared/js/loading-bar.js"></script>
+  <script src="bower_components/ng-file-input/dist/ng-file-input.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-moment-picker/moment-with-locales.js"></script>
+  <script src="bower_components/angular-moment-picker/dist/angular-moment-picker.js"></script>
+  <script src="bower_components/angular-audio/app/angular.audio.js"></script>
+  <script src="dash.js"></script>
+  <script src="dashboardnewcourse/dashboardnewcourse.js"></script>
+  <script src="dashboardcoursesnewcategory/dashboardnewcoursecategory.js"></script>
+  <script src="dashboardcoursescategories/dashboardcoursescategories.js"></script>
+  <script src="dashboardeditcoursescategories/dashboardeditcoursecategory.js"></script>
+  <script src="dashboardcourses/dashboardcourses.js"></script>
+  <script src="dashboardeditcourse/dashboardeditcoures.js"></script>
+  <script src="dashboardnewcourselessons/dashboardnewcourselessons.js"></script>
+  <script src="dashboardeditcourselesson/dashboardeditcourselesson.js"></script>
+  <script src="dashboardeventscategories/dashboardeventscategories.js"></script>
+  <script src="dashboardneweventscategory/dashboardneweventscategory.js"></script>
+  <script src="dashboardediteventscategories/dashboardediteventscategories.js"></script>
+  <script src="dashboardevents/dashboardevents.js"></script>
+  <script src="dashboardnewevent/dashboardnewevent.js"></script>
+  <script src="dashboardeditevent/dashboardeditevent.js"></script>
+  <script src="dashboardcoursestudents/dashboardcoursestudents.js"></script>
+  <script src="dashboardcoursegroups/dashboardcoursegroups.js"></script>
+  <script src="dashboardnewcoursegroup/dashboardnewcoursegroup.js"></script>
+  <script src="dashboardeditcoursegroup/dashboardeditcoursegroup.js"></script>
+  <script src="dashboardprogramescategories/dashboardprogramescategories.js"></script>
+  <script src="dashboardneweprogramecategory/dashboardneweprogramecategory.js"></script>
+  <script src="dashboardeditprogramescategories/dashboardeditprogramescategories.js"></script>
+  <script src="dashboardnewprograme/dashboardnewprograme.js"></script>
+  <script src="dashboardprogrames/dashboardprogrames.js"></script>
+  <script src="dashboardprgramecourses/dashboardprgramecourses.js"></script>
+  <script src="dashboardnewprogramecourse/dashboardnewprogramecourse.js"></script>
+  <script src="dashboardnewprogramecoursegroup/dashboardnewprogramecoursegroup.js"></script>
+  <script src="dashboardprogramecoursegroups/dashboardprogramecoursegroups.js"></script>
+  <script src="dashboardnewnewscategory/dashboardnewnewscategory.js"></script>
+  <script src="dashboardnewscategories/dashboardnewscategories.js"></script>
+  <script src="dashboardeditnewscategories/dashboardeditnewscategories.js"></script>
+  <script src="dashboardnewnews/dashboardnewnews.js"></script>
+  <script src="dashboardnews/dashboardnews.js"></script>
+  <script src="dashboardeditnews/dashboardeditnews.js"></script>
+  <script src="dashboardjobscategories/dashboardjobscategories.js"></script>
+  <script src="dashboardnewjobscategory/dashboardnewjobscategory.js"></script>
+  <script src="dashboardeditjobscategories/dashboardeditjobscategories.js"></script>
+  <script src="dashboardnewjob/dashboardnewjob.js"></script>
+  <script src="dashboardjobs/dashboardjobs.js"></script>
+  <script src="dashboardeditjob/dashboardeditjob.js"></script>
+  <script src="dashboardnewemployee/dashboardnewemployee.js"></script>
+  <script src="dashboardemployees/dashboardemployees.js"></script>
+  <script src="dashboardeditemployee/dashboardeditemployee.js"></script>
+  <!-- End AngularJS WorkStation -->
+  <script src="bower_components/angular-confirm/dist/angular-confirm.min.js"></script>
+  <!-- <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script> -->
+  <script src="ckeditor/ckeditor.js"></script>
+  <!-- /circle-->
+  <script type="text/javascript" src="shared/js/circles.js"></script>
+  <!-- //circle -->
+  <!-- /amcharts -->
+  <script src="shared/js/amcharts.js"></script>
+  <script src="shared/js/serial.js"></script>
+  <script src="shared/js/light.js"></script>
+  <!-- Chart code -->
+  <!-- //amcharts -->
+  <script src="shared/js/Chart.min.js"></script>
+  <script src="shared/js/modernizr.custom.js"></script>
+  <script src="shared/js/jquery.basictable.min.js"></script>
+  <!-- script-for-menu -->
+  <!-- //js -->
+  <script src="shared/js/screenfull.js"></script>
+  <script>
+    $(function () {
+      $('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+      if (!screenfull.enabled) {
+        return false;
+      }
+      $('#toggle').click(function () {
+        screenfull.toggle($('#container')[0]);
+      });
+    });
+  </script>
+  <script src="shared/js/jquery.nicescroll.js"></script>
+  <script type="text/javascript" src="shared/js/bootstrap-3.1.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#table').basictable();
+      $('.dropdown-submenu a.test').on("click", function(e){
+      $('.dropdown-submenu ul').hide();
+      $('.dropdown-submenu a.test').css("background-color","#fff")
+      $('.dropdown-submenu a.test').css("color","#000");
+      $(this).next('ul').show();
+      $(this).css("background-color","#ff4f57");
+      $(this).css("color","#fff");
+    e.stopPropagation();
+    e.preventDefault();
+  });
+      $('#table-breakpoint').basictable({
+        breakpoint: 768
+      });
+  
+      $('#table-swap-axis').basictable({
+        swapAxis: true
+      });
+  
+      $('#table-force-off').basictable({
+        forceResponsive: false
+      });
+  
+      $('#table-no-resize').basictable({
+        noResize: true
+      });
+  
+      $('#table-two-axis').basictable();
+  
+      $('#table-max-height').basictable({
+        tableWrapper: true
+      });
+    });
+  </script>
+</head>
+<body>
+  <toaster-container toaster-options="{'close-button': true , 'position-class': 'toast-top-full-width'}"></toaster-container>
+ 
+
+  <div class="wthree_agile_admin_info">
+
+    
+    <!-- /w3_agileits_top_nav-->
+    <!-- /nav-->
+    <div class="wrapper">
+    <div class="w3_agileits_top_nav">
+        <ul class="gn-menu-main">
+          <!-- /nav_agile_w3l -->
+    
+          <li class="gn-trigger">
+            <a class="gn-icon gn-icon-menu" id="sidebarCollapse">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+              <span>Menu</span>
+            </a>
+            <nav class="gn-menu-wrapper" id="sidebar">
+              <div class="gn-scroller scrollbar1">
+                <ul class="gn-menu agile_menu_drop">
+                  <!-- <li>
+                    <a href="#!/dashboardindex">
+                      <i class="fa fa-tachometer"></i>Dashboard</a>
+                  </li> -->
+                      <li class="dropdown-submenu">
+                          <a tabindex="-1" class="test">
+                              <i class="fa fa-graduation-cap" aria-hidden="true"></i>Courses Menu
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                          <ul class="dropdown-menucourses">
+                              <li class="mini_list_agile">
+                                  <a href="#!/dashboardcourses" tabindex="-1"  >
+                                    <i class="fa fa-certificate" aria-hidden="true" ></i> Courses</a>
+                                </li>
+                              <li class="mini_list_agile">
+                                  <a href="#!/dashboardcoursescategories" tabindex="-1"   >
+                                    <i class="fa fa-sitemap" aria-hidden="true"></i> Categories</a>
+                                </li>
+                          </ul>
+                
+                       </li>
+                  <li class="dropdown-submenu">
+                      <a tabindex="-1" class="test">
+                       <i class="fa fa-graduation-cap" aria-hidden="true"></i>Programs Menu
+                      <i class="fa fa-angle-down" aria-hidden="true"> </i>
+          
+                    </a>
+                    <ul class="dropdown-menuprogrames">
+               
+                      <li class="mini_list_agile">
+                        <a href="#!/dashboardprogrames"   >
+                          <i class="fa fa-certificate" aria-hidden="true"></i> Programs</a>
+                      </li>
+                      <li class="mini_list_agile">
+                        <a href="#!/dashboardprogramescategories"   >
+                          <i class="fa fa-sitemap" aria-hidden="true"></i> Categories</a>
+                      </li> 
+    
+                    </ul>
+                  </li>
+    
+                  <li class="dropdown-submenu">
+    
+                      <a tabindex="-1" class="test">
+                      <i class="fa fa-calendar-check-o" aria-hidden="true"></i> Events Menu
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menuevents">
+                      <li class="mini_list_agile">
+                        <a href="#!/dashboardevents" >
+                          <i class="fa fa-calendar-o" aria-hidden="true"></i> Events</a>
+                      </li>
+                      <li class="mini_list_agile">
+                        <a href="#!/dashboardeventscategories" >
+                          <i class="fa fa-sitemap" aria-hidden="true"></i> Categories</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                      <a tabindex="-1" class="test">
+                      <i class="fa fa-newspaper-o" aria-hidden="true"></i> News Menu
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="dropdown-menunews">
+    
+                      <li class="mini_list_agile">
+                        <a href="#!/dashboardnews" >
+                          <i class="fa fa-newspaper-o" aria-hidden="true"></i>News</a>
+                      </li>
+                      <li class="mini_list_agile">
+                        <a href="#!/dashboardnewscategories" >
+                          <i class="fa fa-sitemap" aria-hidden="true"></i>Categories</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                      <a tabindex="-1" class="test">
+                        <i class="fa fa-suitcase" aria-hidden="true"></i> Jobs Menu
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      </a>
+                      <ul class="dropdown-menujobs">
+                        <li class="mini_list_agile">
+                          <a href="#!/dashboardjobs" >
+                            <i class="fa fa-suitcase" aria-hidden="true"></i> Jobs</a>
+                        </li>
+                        <li class="mini_list_agile">
+                            <a href="#!/dashboardjobscategories" >
+                            <i class="fa fa-sitemap" aria-hidden="true"></i> Categories</a>
+                        
+                        
+                          </li>
+                      </ul>
+                    </li>
+                    
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" class="test">
+                        <i class="fa fa-users" aria-hidden="true"></i> HR Menu
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      </a>
+                      <ul class="dropdown-menuhr">
+                        <li class="mini_list_agile">
+                            <a href="" >
+                              <i class="fa fa-user-plus" aria-hidden="true"></i>Instructors</a>
+                          </li>
+                          <li class="mini_list_agile">
+                              <a href="" >
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>Students</a>
+                            </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" class="test">
+                        <i class="fa fa-bar-chart-o" aria-hidden="true"></i> Reports Menu
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      </a>
+                      <ul class="dropdown-menureports">
+                        <li class="mini_list_agile">
+                          <a href=""  >
+                            <i class="fa fa-bar-chart-o" aria-hidden="true"></i>Reports</a>
+                        </li>
+                  
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="" >
+                          <i class="fa fa-gears" aria-hidden="true"></i>SPARK Settings</a>
+                  
+                  </li>
+    
+    
+              
+                </ul>
+              </div>
+              <!-- /gn-scroller -->
+            </nav>
+          </li>
+         
+          <!-- //nav_agile_w3l -->
+          <li class="second logo">
+            <h1>
+              <a href="index.html/">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>SPARK SCHOOL</a>
+            </h1>
+          </li>
+         <li class="second admin-pic">
+           <!-- <ul class="top_dp_agile">
+              <li class="dropdown profile_details_drop">
+                <!-- <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <div class="profile_img">
+                    <span class="prfil-img">
+                      <img src="shared/images/admin.jpg" alt=""> </span>
+                  </div>
+                </a> 
+                <ul class="dropdown-menu drp-mnu">
+                  <li>
+                    <a href="">
+                      <i class="fa fa-cog"></i> Settings</a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <i class="fa fa-user"></i> Profile</a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <i class="fa fa-sign-out"></i> Logout</a>
+                  </li>
+                </ul>
+              </li>
+    
+            </ul>-->
+          </li> 
+          <li class="second top_bell_nav">
+            <ul class="top_dp_agile ">
+              <li class="dropdown head-dpdn">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                  <i class="fa fa-bell-o" aria-hidden="true"></i>
+                  <span class="badge blue">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="notification_header">
+                      <h3>Your Notifications</h3>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="user_img">
+                        <img src="shared/images/a3.jpg" alt="">
+                      </div>
+                      <div class="notification_desc">
+                        <h6>John Smith</h6>
+                        <p>Lorem ipsum dolor</p>
+                        <p>
+                          <span>1 hour ago</span>
+                        </p>
+                      </div>
+                      <div class="clearfix"></div>
+                    </a>
+                  </li>
+                  <li class="odd">
+                    <a href="">
+                      <div class="user_img">
+                        <img src="shared/images/a1.jpg" alt="">
+                      </div>
+                      <div class="notification_desc">
+                        <h6>Jasmin Leo</h6>
+                        <p>Lorem ipsum dolor</p>
+                        <p>
+                          <span>3 hour ago</span>
+                        </p>
+                      </div>
+                      <div class="clearfix"></div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="user_img">
+                        <img src="shared/images/a2.jpg" alt="">
+                      </div>
+                      <div class="notification_desc">
+                        <h6>James Smith</h6>
+                        <p>Lorem ipsum dolor</p>
+                        <p>
+                          <span>2 hour ago</span>
+                        </p>
+                      </div>
+                      <div class="clearfix"></div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="user_img">
+                        <img src="shared/images/a4.jpg" alt="">
+                      </div>
+                      <div class="notification_desc">
+                        <h6>James Smith</h6>
+                        <p>Lorem ipsum dolor</p>
+                        <p>
+                          <span>1 hour ago</span>
+                        </p>
+                      </div>
+                      <div class="clearfix"></div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="notification_bottom">
+                      <a href="">See all Notifications</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+    
+            </ul>
+          </li>
+          <li class="second top_bell_nav">
+            <ul class="top_dp_agile ">
+              <li class="dropdown head-dpdn">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  <span class="badge blue">3</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="notification_header">
+                      <h3>Your Messages</h3>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="user_img">
+                        <img src="shared/images/a3.jpg" alt="">
+                      </div>
+                      <div class="notification_desc">
+                        <h6>John Smith</h6>
+                        <p>Lorem ipsum dolor</p>
+                        <p>
+                          <span>3 hour ago</span>
+                        </p>
+                      </div>
+                      <div class="clearfix"></div>
+                    </a>
+                  </li>
+                  <li class="odd">
+                    <a href="">
+                      <div class="user_img">
+                        <img src="shared/images/a1.jpg" alt="">
+                      </div>
+                      <div class="notification_desc">
+                        <h6>Jasmin Leo</h6>
+                        <p>Lorem ipsum dolor</p>
+                        <p>
+                          <span>2 hour ago</span>
+                        </p>
+                      </div>
+                      <div class="clearfix"></div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="user_img">
+                        <img src="shared/images/a2.jpg" alt="">
+                      </div>
+                      <div class="notification_desc">
+                        <h6>James Smith</h6>
+                        <p>Lorem ipsum dolor</p>
+                        <p>
+                          <span>1 hour ago</span>
+                        </p>
+                      </div>
+                      <div class="clearfix"></div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="notification_bottom">
+                      <a href="">See all Messages</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+    
+            </ul>
+          </li>
+          <li class="second top_bell_nav">
+            <ul class="top_dp_agile ">
+              <li class="dropdown head-dpdn">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-tasks"></i>
+                  <span class="badge blue">9</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="notification_header">
+                      <h3>You have 4 Pending tasks</h3>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="task-info">
+                        <span class="task-desc">Database update</span>
+                        <span class="percentage">40%</span>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="progress progress-striped active">
+                        <div class="bar yellow" style="width:40%;"></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="task-info">
+                        <span class="task-desc">Dashboard done</span>
+                        <span class="percentage">90%</span>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="progress progress-striped active">
+                        <div class="bar green" style="width:90%;"></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="task-info">
+                        <span class="task-desc">Mobile App</span>
+                        <span class="percentage">33%</span>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="progress progress-striped active">
+                        <div class="bar red" style="width: 33%;"></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <div class="task-info">
+                        <span class="task-desc">Issues fixed</span>
+                        <span class="percentage">80%</span>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="progress progress-striped active">
+                        <div class="bar  blue" style="width: 80%;"></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="notification_bottom">
+                      <a href="">See all pending tasks</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+    
+    
+    
+          <!-- /nav_agile_w3l -->
+          <li class="second full-screen">
+            <section class="full-top">
+              <button id="toggle">
+                <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+              </button>
+            </section>
+          </li>
+         
+       
+         
+          
+          
+               
+                <li class="">
+                    <a href="index.html">
+                      <img ng-src="shared/images/appletsoftware.png"  alt="logo" title="SPARK SCHOOL" src="shared/images/appletsoftware.png" style="width:50px;height:50px;">
+                      
+                    </a>
+                  
+                  </li>
+               
+                
+    
+        </ul>
+    
+        <!-- //nav -->
+    
+      </div>
+
+    <div class="clearfix"></div>
+    <!-- //w3_agileits_top_nav-->
+    <div id="collapsetrigger">
+    <div class="inner_content" ng-view></div>
+  </div>
+  </div>
+
+
+  <div class="copyrights" >
+    <p>© 2017 APPLET Software . All Rights Reserved | Design by
+      <a href="" target="_blank">APPLET Software</a>
+    </p>
+  </div>
+
+  <script src="shared/js/classie.js"></script>
+  <script src="shared/js/gnmenu.js"></script>
+  <!-- <script>
+    new gnMenu(document.getElementById('gn-menu1'));
+    new gnMenu(document.getElementById('gn-menu2'));
+  </script> -->
+
+  <!--skycons-icons-->
+  <script src="shared/js/skycons.js"></script>
+
+
+  <!--//skycons-icons-->
+  <script src="shared/js/scripts.js"></script>
+
+
+  <script src="bower_components/video.js/dist/video.min.js"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#sidebar').toggleClass('active');
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            $('.dropdown-submenu ul').hide();
+            $('.dropdown-submenu a.test').css("background-color","#fff")
+      $('.dropdown-submenu a.test').css("color","#000");
+           
+        });
+        $('#collapsetrigger').on('click', function () {
+          $('#sidebar').addClass('active');
+          $('.dropdown-submenu ul').hide();
+          $('.dropdown-submenu a.test').css("background-color","#fff")
+      $('.dropdown-submenu a.test').css("color","#000");
+        });
+    });
+</script>
+
+</body>
+
+</html>

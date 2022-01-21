@@ -1,0 +1,69 @@
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li>
+                <a href="#!/dashboardnewscategories">News Categories</a>
+                <span>«</span>
+            </li>
+            <li>
+                New Category
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+
+<div class="inner_content_w3_agile_info two_in">
+    <h2 class="w3_inner_tittle"> New Category</h2>
+
+    <!--/forms-->
+    <div class="forms-main_agileits" ng-controller="NewNewsCategoryController as Model" style="min-height:350px; ">
+        <!--/forms-inner-->
+        <div class="forms-inner">
+            <!--/set-3-->
+
+            <div class="wthree_general">
+
+
+                <div class="grid-1 graph-form agile_info_shadow">
+
+                    <form class="form-horizontal" novalidate="novalidate" autocomplete="true" name="NewNewsCategoryForm">
+                        <div class="form-group">
+
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="input-group" ng-class="{'has-error':NewNewsCategoryForm.txtCategoryName.$dirty&&NewNewsCategoryForm.txtCategoryName.$invalid}">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-edit"></i>
+                                    </span>
+                                    <input type="text" id="txtCategoryName" name="txtCategoryName" ng-model="Model.Cat_Name " ng-maxlength="100" required="required" ng-class="{'has-error':NewNewsCategoryForm.txtCategoryName.$dirty&&NewNewsCategoryForm.txtCategoryName.$invalid}"
+                                        class="form-control1 icon" placeholder="News Category Name">
+                                </div>
+                                <div class="help-block" ng-messages="NewNewsCategoryForm.txtCategoryName.$error" ng-if="NewNewsCategoryForm.txtCategoryName.$dirty" style="color:maroon"
+                                    role="alert">
+
+                                    <ng-message when="required" translate>News Category Name is required *</ng-message>
+
+                                    <div ng-message="maxlength">News Category Name max size 100 charchters *</div>
+                                </div>
+                            </div>
+                         
+                        </div>
+               
+
+                        <div class="button">
+                            <p class="btnText">READY?</p>
+                            <div class="btnTwo">
+                                <button type="button" class="btnText2" ng-disabled="NewNewsCategoryForm.$invalid" ng-click="Model.Submit()">Save</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <!--//set-3-->
+        </div>
+        <!--//forms-inner-->
+    </div>
+    <!--//forms-->

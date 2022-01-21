@@ -1,0 +1,187 @@
+<!-- breadcrumbs -->
+
+<section ng-controller="NewCourseGroupController as Model">
+    <div class="w3l_agileits_breadcrumbs">
+        <div class="w3l_agileits_breadcrumbs_inner">
+            <ul>
+                <li>
+                    <li>
+                        <a href="#!/dashboardcourses">Courses</a>
+                    </li>
+                    <span>«</span>
+                </li>
+                <li>
+                    <li>
+                        <a>{{Model.Crs_Name}}</a>
+                    </li>
+                    <span>«</span>
+                </li>
+                <li>
+                    <a href="#!/dashboardcoursegroups/{{Model.Crs_Id}}"> Groups</a>
+
+
+
+
+
+                </li>
+                <span>«</span>
+                <li> New Group</li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- //breadcrumbs -->
+    <div class="inner_content_w3_agile_info two_in">
+        <h2 class="w3_inner_tittle">{{Model.Crs_Name}}</h2>
+        <!-- tables -->
+
+        <div class="agile-tables">
+            <div class="w3l-table-info agile_info_shadow text-center">
+
+                <form class="form-horizontal" novalidate="novalidate" autocomplete="true" name="NewCourseGroupForm">
+                    <div class="form-group">
+
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="input-group" ng-class="{'has-error':NewCourseGroupForm.txtCrsGroupName.$dirty&&NewCourseGroupForm.txtCrsGroupName.$invalid}">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-edit"></i>
+                                </span>
+                                <input type="text" id="txtCrsGroupName" name="txtCrsGroupName" ng-model="Model.Group_Name" ng-maxlength="100" required="required"
+                                    ng-class="{'has-error':NewCourseGroupForm.txtCrsGroupName.$dirty&&NewCourseGroupForm.txtCrsGroupName.$invalid}"
+                                    class="form-control1 icon" placeholder="Course Group Name">
+                            </div>
+                            <div class="help-block" ng-messages="NewCourseGroupForm.txtCrsGroupName.$error" ng-if="NewCourseGroupForm.txtCrsGroupName.$dirty"
+                                style="color:maroon" role="alert">
+
+                                <ng-message when="required" translate>Course Group Name is required *</ng-message>
+
+                                <div ng-message="maxlength">Course Group Name max size 100 charchters *</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="col-md-5 col-md-offset-1">
+                                <div class="input-group" moment-picker="Model.Group_SessionTime1" format="LLL">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                        <input class="form-control" placeholder="Select a date" ng-model="Model.Group_SessionTime1" ng-model-options="{ updateOn: 'blur' }">
+                                    </div>
+                                    <div class="help-block" ng-messages="NewCourseLessonForm.txtsessionstime.$error" ng-if="NewCourseLessonForm.txtsessionstime.$dirty"
+                                        style="color:maroon" role="alert">
+
+                                        <ng-message when="required" translate>Lesson Session Time is required *</ng-message>
+
+                                    </div>
+                                    <div class="input-group" moment-picker="Model.Group_SessionTime2" format="LLL">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                            <input class="form-control" placeholder="Select a date" ng-model="Model.Group_SessionTime2" ng-model-options="{ updateOn: 'blur' }">
+                                        </div>
+                                        <div class="help-block" ng-messages="NewCourseLessonForm.txtsessionstime.$error" ng-if="NewCourseLessonForm.txtsessionstime.$dirty"
+                                            style="color:maroon" role="alert">
+    
+                                            <ng-message when="required" translate>Lesson Session Time is required *</ng-message>
+    
+                                        </div>
+                                        <div class="input-group" moment-picker="Model.Group_SessionTime3" format="LLL">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-calendar"></i>
+                                                </span>
+                                                <input class="form-control" placeholder="Select a date" ng-model="Model.Group_SessionTime3" ng-model-options="{ updateOn: 'blur' }">
+                                            </div>
+                                            <div class="help-block" ng-messages="NewCourseLessonForm.txtsessionstime.$error" ng-if="NewCourseLessonForm.txtsessionstime.$dirty"
+                                                style="color:maroon" role="alert">
+        
+                                                <ng-message when="required" translate>Lesson Session Time is required *</ng-message>
+        
+                                            </div>
+                                            <div class="input-group" moment-picker="Model.Group_SessionTime4" format="LLL">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                    <input class="form-control" placeholder="Select a date" ng-model="Model.Group_SessionTime4" ng-model-options="{ updateOn: 'blur' }">
+                                                </div>
+                                                <div class="help-block" ng-messages="NewCourseLessonForm.txtsessionstime.$error" ng-if="NewCourseLessonForm.txtsessionstime.$dirty"
+                                                    style="color:maroon" role="alert">
+            
+                                                    <ng-message when="required" translate>Lesson Session Time is required *</ng-message>
+            
+                                                </div>
+                                                <div class="input-group" moment-picker="Model.Group_SessionTime5" format="LLL">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                        <input class="form-control" placeholder="Select a date" ng-model="Model.Group_SessionTime5" ng-model-options="{ updateOn: 'blur' }">
+                                                    </div>
+                                                    <div class="help-block" ng-messages="NewCourseLessonForm.txtsessionstime.$error" ng-if="NewCourseLessonForm.txtsessionstime.$dirty"
+                                                        style="color:maroon" role="alert">
+                
+                                                        <ng-message when="required" translate>Lesson Session Time is required *</ng-message>
+                
+                                                    </div>
+                                                    <div class="input-group" moment-picker="Model.Group_SessionTime6" format="LLL">
+                                                            <span class="input-group-addon">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </span>
+                                                            <input class="form-control" placeholder="Select a date" ng-model="Model.Group_SessionTime6" ng-model-options="{ updateOn: 'blur' }">
+                                                        </div>
+                                                        <div class="help-block" ng-messages="NewCourseLessonForm.txtsessionstime.$error" ng-if="NewCourseLessonForm.txtsessionstime.$dirty"
+                                                            style="color:maroon" role="alert">
+                    
+                                                            <ng-message when="required" translate>Lesson Session Time is required *</ng-message>
+                    
+                                                        </div>
+                        </div>
+
+                        <div class="col-md-5 col-md-offset-0">
+                           
+                                <div class="input-group" ng-class="{'has-error':NewCourseForm.drpCrsDuration.$dirty&&NewCourseForm.drpCrsDuration.$invalid}">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-align-justify"></i>
+                                        </span>
+                                        <select class="form-control" name="drpGroupInstructors" ng-model="Model.Group_Instructors" required="required" multiple="multiple" size="16">
+                                          
+                                                <option class="text-center" ng-repeat="Instructor in Model.ALLInstructors" value="{{Instructor.Inst_Fname}} {{Instructor.Inst_Lname}}">{{Instructor.Inst_Fname}}&nbsp;{{Instructor.Inst_Lname}}</option>
+                                            
+                                    
+                                        </select>
+                                    </div>
+                                    <div class="help-block" ng-messages="NewCourseForm.drpGroupInstructors.$error" ng-if="NewCourseForm.drpGroupInstructors.$dirty" style="color:maroon"
+                                        role="alert">
+    
+                                        <ng-message when="required" translate>Course Category is required *</ng-message>
+    
+                                    </div>
+
+
+                            </div>
+    
+                    </div>
+
+                 
+
+
+                    <div class="button">
+                        <p class="btnText">READY?</p>
+                        <div class="btnTwo">
+                            <button type="button" class="btnText2" ng-disabled="NewCourseGroupForm.$invalid" ng-click="Model.Submit()">Save</button>
+                        </div>
+                    </div>
+
+                </form>
+
+
+            </div>
+
+
+            <!-- //tables -->
+        </div>
+</section>

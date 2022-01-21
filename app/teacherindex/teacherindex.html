@@ -1,0 +1,114 @@
+<section class="teacher-index-layout">
+    <div class="row">
+
+        <div class="col-md-4">
+            <nav class="customeBox">
+
+                <ul>
+                    <li>
+                        <i class="fa fa-arrow-circle-down nav_icon "></i>
+                        <span class="nav-label">Main Menu</span>
+                    </li>
+                    <li class="activetab">
+                        <a href="#!/teacherindex" class=" hvr-bounce-to-right">
+                            <i class="fa fa-user nav_icon "></i>
+                            <span class="nav-label">Jhone Mart</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#!/teachercourses" class=" hvr-bounce-to-right">
+                            <i class="fa fa-home nav_icon"></i>
+                            <span class="nav-label">Instructor Courses</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#!/teachernewcourse" class=" hvr-bounce-to-right">
+                            <i class="fa fa-plus-circle nav_icon"></i>
+                            <span class="nav-label">New Course</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#!/teacheranalytics" class=" hvr-bounce-to-right">
+                            <i class="fa fa-dashboard nav_icon"></i>
+                            <span class="nav-label">Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!/teachersettings" class=" hvr-bounce-to-right">
+                            <i class="fa fa-gear nav_icon"></i>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class=" hvr-bounce-to-right">
+                            <i class="fa fa-sign-out nav_icon"></i>
+                            <span class="nav-label">Log Off</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-8">
+            <section class="customContainer" ng-controller="TeacherIndexController as Model">
+                <div class="col-md-9">
+
+                    <h5>
+                        <label>Instructor Name</label>
+                        <span>{{Model.instructorInfo.Inst_Fname|uppercase}}&nbsp;{{Model.instructorInfo.Inst_Lname|uppercase}}</span>
+                    </h5>
+                    <h5>
+                        <label>Instructor Category</label>
+                        <span>{{Model.instructorInfo.InstCat_Id|uppercase}}</span>
+                    </h5>
+                  
+                    <h5>
+                        <label>Instructor Gender</label>
+                        <span>{{Model.instructorInfo.Inst_Gender|uppercase}}</span>
+                    </h5>
+                    <h5>
+                        <label>Instructor BirthDate</label>
+                        <span>{{Model.instructorInfo.Inst_Bdate|date:'medium'}}</span>
+                    </h5>
+                    <h5>
+                        <label>Instructor Street</label>
+                        <span>{{Model.instructorInfo.Inst_Street|uppercase}}</span>
+                    </h5>
+                    <h5>
+                        <label>Instructor City</label>
+                        <span>{{Model.instructorInfo.Inst_City|uppercase}}</span>
+                    </h5>
+                    <h5>
+                        <label>Instructor Country</label>
+                        <span>{{Model.instructorInfo.Inst_Country|uppercase}}</span>
+                    </h5>
+                    <h5>
+                        <label>Instructor Bio</label>
+                        <span>{{Model.instructorInfo.Inst_Bio|uppercase}}</span>
+                    </h5>
+
+                </div>
+                <div class="col-md-3">
+
+                    <img class="img img-thumbnail" src="../shared/images/a1.jpg" width="80%">
+
+                </div>
+
+
+
+
+
+
+
+            </section>
+
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,361 @@
+/* ***************************** Ramzy Start Media Query*************************** */
+
+/* Small devices (landscape phones, 576px and up)  */
+@media (max-width: 767px) {
+    ul.indexnav{
+
+        margin-left: 0;
+    }
+    body { overflow-x: hidden }
+            
+    /* **************************** */
+    
+    .dropcontainer1 {
+        left: 0;
+        width: 100%
+    }
+    
+    .navbar-default .container {margin-left: 0px;margin-right: 0px;} 
+    
+    .navbar-nav { margin: 0px -15px }
+    
+    .navbar-default .navbar-nav>li>a img { float: right;padding-top: 10px}
+
+    
+    /*--------------------- Left Pane Responsive ----------------------------*/
+    
+    
+      .leftpane{
+        
+        width: 100%;
+        
+    }
+      .leftpane .leftpaneleft{
+        
+        width: 100%;
+          margin-bottom: 10px;
+          text-align: center;
+       
+        
+        
+    }
+       .leftpane .leftpaneright {
+        
+        width: 100%;
+       font-size: 14px;
+          font-weight: lighter;
+           margin: :0px;
+        
+        
+    }
+    
+      .leftpane .leftpaneright > h3{
+        
+        width: 100%;
+       font-size: 18px;
+          font-weight: bold;
+          margin-top: 10px;
+          text-align: center;
+        
+        
+    }
+    
+    .rightpane h3  b {
+        
+        font-size: 18px;
+        font-weight: bold;
+        
+        
+    }
+    
+      
+      .leftpane .leftpaneright > p{
+        
+          font-size: 14px;
+          font-weight: normal;
+          font-family: inherit;
+          text-align: center;
+          
+        
+    }
+    .rightpane{
+        
+        width: 100%;
+ 
+    }
+    .rightpane .rightpaneleft{
+      
+        width: 100%;
+        
+    }
+    .rightpane .rightpaneright{
+        
+        width: 100%;
+        
+    }
+    
+   .upcoming-courses .breadcrumbs-menu li{
+    float: left;
+    font-size: 14px;
+    font-weight: 300;
+    padding-right: 0px;
+    border-style: none;
+    
+} 
+    .selectbox .col-md-3 >img{
+        
+        height: 50px;
+        width: 70%;
+        
+    }
+    
+    #post  h1 {
+        
+        font-size: 14px;
+        
+        
+    }
+    #post {
+        
+        margin-top: 5px;
+        
+    }
+    #post ul li {
+        
+        padding: 0px;
+        font-size: 14px;
+        
+        
+    }
+    main h1{
+        
+        font-size: 14px;
+    }
+    
+    .box-style-one img {
+	width: 100%;
+        
+}
+    
+    input[type="submit"], input[type="reset"] {
+	width: 60%;
+	margin-bottom: 15px;
+	transition: width 2s ease;
+  
+    }
+    
+/* ----------------------------------- Courses Ramzy Start Media Query ------------------------   */
+    
+.title-course h3 {
+	font-size: 14px;
+	padding: 5px 0 5px 15px;
+	color: #fff;
+	margin: 0;
+}
+.title-course ul li {
+	display: inline-block;
+	font-weight: 300;
+	margin-left: 15px;
+	zoom: 1;
+}
+    .strip-courses .description ul li {
+	display: block;
+	font-weight:600;
+	margin-right: 8px;
+	padding-right: 8px;
+	border-right:none;
+	line-height: 16px;
+	zoom: 1;
+}
+    .button_medium, .megamenu > li .drop-down-container a.button_medium, a.button_medium {
+	border: none;
+	background: #099ad1;
+	color: #fff;
+	padding: 2px 5px;
+	text-decoration: none;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	display:block;
+	cursor: pointer;
+	font-weight: 400;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+ /* ----------------------------------- Courses Ramzy End Media Query ------------------------   */
+    
+}
+
+
+/* *************************************************************** */ 
+
+@media (max-width: 990px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}
+
+/*  Medium devices (tablets, 768px and up)  */
+@media (min-width: 768px) and (max-width: 991px) {
+    ul.indexnav{
+
+        margin-left: 0;
+    }
+  .navbar-default  .container ul li {
+        
+        padding-left: 1px;
+        
+    }
+    
+    
+        
+}
+
+
+/*  Large devices (desktops, 992px and up) */
+@media only screen (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen (min-width: 1200px) {
+
+}
+
+/* *****************************End Media Query***************************** */
+
+
+
+/*----------------------- Sayed Media Query  About&Staff --------------------------------------------------*/
+
+
+/* *****************************Start Media Query*************************** */
+
+/* Small devices (landscape phones, 576px and up)  */
+@media (max-width: 767px) {
+    ul.indexnav{
+
+        margin-left: 0;
+    }
+    body { overflow-x: hidden }
+            
+    .about .first .up, .about .first .down, .staff .first .up, .staff .first .down
+    { margin-left: 0 }
+    
+    .about .second, .staff .second { margin-left: 15px;margin-right: 15px}
+    
+    .staff .second .media-heading { margin-top: 20px }
+    
+    .staff .second .social span { margin-bottom: 10px }
+    
+    .staff .second hr { margin-top: 20px }
+    
+    .about .second .second-para, .staff .second .second-para {
+        padding: 5px 20px;font-size: 17px
+    }
+    
+    
+    /* **************************** */
+    
+    .about .my-heading , .staff .my-heading ,
+    .about .my-paragraph , .staff .my-paragraph { padding-left: 18px }
+    
+    .dropcontainer1 {
+        left: 0;
+        width: 100%
+    }
+    
+    .navbar-default .container {margin-left: 0px;margin-right: 0px;} 
+    
+    .navbar-nav { margin: 0px -15px }
+    
+    .navbar-default .navbar-nav>li>a img { float: right;padding-top: 10px}
+
+    
+}
+
+/* *************************************************************** */ 
+
+@media (max-width: 480px) {
+    ul.indexnav{
+
+        margin-left: 0;
+    }
+    .about .second .second-para, .staff .second .second-para {
+        padding: 8px 20px;font-size: 15px;line-height: 1.3
+    }
+        
+    .about .second .myImg img, .staff .second .myImg img { height: 240px}
+}
+
+/* *************************************************************** */ 
+
+
+
+/*  Medium devices (tablets, 768px and up)  */
+@media (min-width: 768px) and (max-width: 991px) {
+    ul.indexnav{
+
+        margin-left: 0;
+    }
+    .about .second .second-para, .staff .second .second-para {
+        padding: 5px 20px;font-size: 17px
+    }
+    
+    .staff .second .media-heading { margin-top: 20px }
+    
+    .about .second, .staff .second { margin-right: 0px;margin-left: 0px } 
+        
+    .about .my-heading , .staff .my-heading ,
+    .about .my-paragraph , .staff .my-paragraph { padding-left: 5px }
+}
+
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .about .second, .staff .second { margin-right: 0;margin-left: 5px}
+    
+    .about .first .up, .about .first .down, .staff .first .up, .staff .first .down
+    { margin-left: 0 }
+    
+    .about .first , .staff .first  { margin-left: -10px }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
+
+/* *****************************End Media Query***************************** */

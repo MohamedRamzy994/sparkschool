@@ -1,0 +1,128 @@
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li>
+                <a href="#!/dashboardevents">Events</a>
+                <span>«</span>
+            </li>
+            <li>
+               Edit Event
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+
+<div class="inner_content_w3_agile_info two_in">
+    <h2 class="w3_inner_tittle">Edit Event</h2>
+
+    <!--/forms-->
+    <div class="forms-main_agileits" ng-controller="EditEventController as Model">
+        <!--/forms-inner-->
+        <div class="forms-inner">
+            <!--/set-3-->
+
+            <div class="wthree_general">
+                
+
+                <div class="grid-1 graph-form agile_info_shadow">
+
+                    <form class="form-horizontal" novalidate="novalidate" autocomplete="true" name="EditEventForm">
+                        <div class="form-group">
+
+                            <div class="col-md-10 col-md-10 col-md-offset-1">
+                                <div class="input-group" ng-class="{'has-error':EditEventForm.txtCrsName.$dirty&&EditEventForm.txtCrsName.$invalid}">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-edit"></i>
+                                    </span>
+                                    <input type="text" name="txtCrsName" ng-model="Model.Event.Event_Title" ng-maxlength="100" required="required" ng-class="{'has-error':EditEventForm.txtCrsName.$dirty&&EditEventForm.txtCrsName.$invalid}"
+                                        class="form-control1 icon" placeholder="Event Name">
+                                </div>
+                                <div class="help-block" ng-messages="EditEventForm.txtCrsName.$error" ng-if="EditEventForm.txtCrsName.$dirty" style="color:maroon"
+                                    role="alert">
+
+                                    <ng-message when="required" translate>Event Name is required *</ng-message>
+
+                                    <div ng-message="maxlength">Event Name max size 100 charchters *</div>
+                                </div>
+                            </div>
+                            <div class="col-md-10 col-md-10 col-md-offset-1">
+                              
+                                <div class="input-group" ng-class="{'has-error':EditEventForm.drpEventCategory.$dirty&&EditEventForm.drpEventCategory.$invalid}">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-align-justify"></i>
+                                    </span>
+                                    <select class="form-control" name="drpEventCategory" ng-model="Model.Event.Cat_Id" required="required">
+                                        <option value="">Event Categories</option>
+                                        <option ng-repeat="Category in Model.EventsCategories" value="{{Category.Cat_Id}}">{{Category.Cat_Name}}</option>
+                                
+                                    </select>
+                                </div>
+                                <div class="help-block" ng-messages="EditEventForm.drpEventCategory.$error" ng-if="EditEventForm.drpEventCategory.$dirty" style="color:maroon"
+                                    role="alert">
+
+                                    <ng-message when="required" translate>Event Category is required *</ng-message>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-10 col-md-10 col-md-offset-1" ng-class="{'has-error':EditEventForm.txtEventPhoto.$dirty&&EditEventForm.txtEventPhoto.$invalid}">
+                                <link rel="stylesheet" href="../shared/css/fileinput.css">
+                                <!-- FONT AWESOME HIDDEN THUMBNAIL CONTENT THEME -->
+                                <!-- load the JS files in the right order -->
+                                <script src="shared/js/fileinput.js"></script>
+                                <script src="/shared/js/theme.js"></script>
+
+
+                                <div class="file-loading">
+                                    <input id="txtEventPhoto" type="file" ng-model="Model.Event.Event_Photo" name="Model.Event.Event_Photo" >
+                                </div>
+                              
+                                <script>
+                                    $("#txtEventPhoto").fileinput({
+                                        initialPreview: "/app/shared/images/access-application-business-360438.jpg",
+                                        uploadUrl: "http://localhost:50816" + "/api/Events/UploadEventsIamge",
+                                        initialPreviewAsData: true,
+                                        initialPreviewConfig: [{
+                                                caption: "SPARK SCHOOL",
+                                                width: "120px"
+                                            },
+
+                                        ],
+                                        overwriteInitial: true,
+                                        maxFileSize: 1000,
+                                        initialCaption: "Insert your Event Image",
+                                        showRemove: false,
+                                        showUpload: false
+
+                                    });
+                                </script>
+
+                                <div class="help-block" ng-messages="EditEventForm.txtEventPhoto.$error" ng-if="EditEventForm.txtEventPhoto.$dirty" style="color:maroon"
+                                role="alert">
+
+                                <ng-message when="required" translate>Event Description is required *</ng-message>
+
+                                </div>
+
+                                </div>
+                        </div>
+
+                        <div class="button">
+                            <p class="btnText">READY?</p>
+                            <div class="btnTwo">
+                                <button type="button" class="btnText2" ng-disabled="EditEventForm.$invalid" ng-click="Model.Submit()">Save</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <!--//set-3-->
+        </div>
+        <!--//forms-inner-->
+    </div>
+    <!--//forms-->

@@ -1,0 +1,206 @@
+<section class="teacher-index-layout">
+    <div class="row">
+
+        <div class="col-md-4">
+            <nav class="customeBox">
+
+                <ul>
+                    <li>
+                        <i class="fa fa-arrow-circle-down nav_icon "></i>
+                        <span class="nav-label">Main Menu</span>
+                    </li>
+                    <li>
+                        <a href="#!/teacherindex" class=" hvr-bounce-to-right">
+                            <i class="fa fa-user nav_icon "></i>
+                            <span class="nav-label">Jhone Mart</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#!/teachercourses" class=" hvr-bounce-to-right">
+                            <i class="fa fa-home nav_icon"></i>
+                            <span class="nav-label">Instructor Courses</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="" class=" hvr-bounce-to-right">
+                            <i class="fa fa-plus-circle nav_icon"></i>
+                            <span class="nav-label">New Course</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#!/teacheranalytics" class=" hvr-bounce-to-right">
+                            <i class="fa fa-dashboard nav_icon"></i>
+                            <span class="nav-label">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="activetab">
+                        <a href="#!/teachersettings" class=" hvr-bounce-to-right">
+                            <i class="fa fa-gear nav_icon"></i>
+                            <span class="nav-label">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class=" hvr-bounce-to-right">
+                            <i class="fa fa-sign-out nav_icon"></i>
+                            <span class="nav-label">Log Off</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="col-md-8">
+            <section class="customContainer col-md-12">
+
+
+                <form class="form-horizontal" novalidate="novalidate" autocomplete="on" name="TecherSettingsForm">
+                    <div class="form-group">
+
+                        <div class="col-md-6 col-md-offset-0">
+                            <div class="input-group" ng-class="{'has-error':TecherSettingsForm.txtFname.$dirty&&TecherSettingsForm.txtFname.$invalid}">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-edit"></i>
+                                </span>
+                                <input type="text" name="txtFname" ng-model="Model.FirstName" ng-maxlength="100" required="required" ng-class="{'has-error':TecherSettingsForm.txtFname.$dirty&&TecherSettingsForm.txtFname.$invalid}"
+                                    class="form-control1 icon" placeholder="First Name">
+                            </div>
+                            <div class="help-block" ng-messages="TecherSettingsForm.txtFname.$error" ng-if="TecherSettingsForm.txtFname.$dirty"style="color:maroon" role="alert">
+                                    
+                                    <ng-message when="required" translate>First Name is required *</ng-message>
+                                    <div ng-message="minlength">First Name at Least 5 charchters *</div>
+                                    <div ng-message="maxlength">First Name max size 15 charchters *</div>
+                                  </div>
+                        </div>
+                        <div class="col-md-6 col-md-offset-0">
+                                <div class="input-group" ng-class="{'has-error':TecherSettingsForm.txtLname.$dirty&&TecherSettingsForm.txtLname.$invalid}">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-edit"></i>
+                                        </span>
+                                        <input type="text" name="txtLname" ng-model="Model.LastName" ng-maxlength="100" required="required" ng-class="{'has-error':TecherSettingsForm.txtLname.$dirty&&TecherSettingsForm.txtLname.$invalid}"
+                                            class="form-control1 icon" placeholder="Last Name">
+                                    </div>
+                                    <div class="help-block" ng-messages="TecherSettingsForm.txtLname.$error" ng-if="TecherSettingsForm.txtLname.$dirty"style="color:maroon" role="alert">
+                                            
+                                            <ng-message when="required" translate>First Name is required *</ng-message>
+                                            <div ng-message="minlength">First Name at Least 5 charchters *</div>
+                                            <div ng-message="maxlength">First Name max size 15 charchters *</div>
+                                          </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="col-md-12 col-md-offset-0">
+                            <div class="input-group" ng-class="{'has-error':TecherSettingsForm.txtTeacherEmail.$dirty&&TecherSettingsForm.txtTeacherEmail.$invalid}">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-envelope "></i>
+                                </span>
+                                <input type="email" name="txtTeacherEmail" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" ng-model="Model.Email" class="form-control1 icon" placeholder="Email Address"
+                                    required="required">
+                            </div>
+                            <div class="help-block" ng-messages="TecherSettingsForm.txtTeacherEmail.$error" ng-if="TecherSettingsForm.txtTeacherEmail.$dirty" style="color:maroon" role="alert" >
+                                    <ng-message when="required" translate="yes">Email is Required *</ng-message>
+                                    <ng-message when="pattern" translate="yes">example:person@yahoo.com *</ng-message>
+                                 </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-0">
+                            <div class="input-group" ng-class="{'has-error':TecherSettingsForm.txtBirthDate.$dirty&&TecherSettingsForm.txtBirthDate.$invalid}">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                                <input type="date" name="txtBirthDate" ng-pattern="/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/" ng-model="Model.BirthDate" class="form-control1 icon" placeholder="Birth Date"
+                                    required="required">
+                            </div>
+                            <div class="help-block" ng-messages="TecherSettingsForm.txtBirthDate.$error" ng-if="TecherSettingsForm.txtBirthDate.$dirty" style="color:maroon"
+                                role="alert">
+                                <ng-message when="required" translate="yes">Birth Date is Required *</ng-message>
+                                
+                                <ng-message when="pattern" translate="yes">Birth Date Example (02/13/2018) *</ng-message>
+                    
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <div class="col-md-12 col-md-offset-0" ng-class="{'has-error':TecherSettingsForm.Crs_Description.$dirty&&TecherSettingsForm.Crs_Description.$invalid}">
+
+                            <textarea name="Crs_Description" ng-model="Model.Crs_Description" ck-editor></textarea>
+                            <!-- <script>
+                                                        CKEDITOR.replace('Crs_Description');
+                                                    </script> -->
+                            <div class="help-block" ng-messages="TecherSettingsForm.Crs_Description.$error" ng-if="TecherSettingsForm.Crs_Description.$dirty" style="color:maroon"
+                                role="alert">
+
+                                <ng-message when="required" translate>Course Description is required *</ng-message>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12 col-md-offset-0" ng-class="{'has-error':TecherSettingsForm.txtCrsPhoto.$dirty&&TecherSettingsForm.txtCrsPhoto.$invalid}">
+                            <link rel="stylesheet" href="../shared/css/fileinput.css">
+                            <!-- FONT AWESOME HIDDEN THUMBNAIL CONTENT THEME -->
+                            <!-- load the JS files in the right order -->
+                            <script src="shared/js/fileinput.js"></script>
+                            <script src="/shared/js/theme.js"></script>
+
+
+                            <div class="file-loading">
+                                <input id="txtCrsPhoto" type="file" ng-model="Model.Crs_Photo">
+                            </div>
+
+                            <script>
+                                $("#txtCrsPhoto").fileinput({
+                                    initialPreview: "/app/shared/images/access-application-business-360438.jpg",
+                                    initialPreviewAsData: true,
+                                    initialPreviewConfig: [{
+                                        caption: "SPARK SCHOOL",
+                                        width: "120px"
+                                    },
+
+                                    ],
+                                    overwriteInitial: true,
+                                    maxFileSize: 1000,
+                                    initialCaption: "SPARK SCHOOL Course",
+                                    showRemove: false,
+                                    showUpload: false
+                                });
+                            </script>
+
+                            <div class="help-block" ng-messages="TecherSettingsForm.txtCrsPhoto.$error" ng-if="TecherSettingsForm.txtCrsPhoto.$dirty" style="color:maroon"
+                                role="alert">
+
+                                <ng-message when="required" translate>Course Description is required *</ng-message>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <p class="btnText">READY?</p>
+                        <div class="btnTwo">
+                            <button type="button" class="btnText2" ng-disabled="TecherSettingsForm.$invalid" ng-click="Model.Submit()">Save</button>
+                        </div>
+                    </div>
+
+                </form>
+
+
+            </section>
+
+
+        </div>
+
+
+
+    </div>
+
+</section>

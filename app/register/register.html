@@ -1,0 +1,125 @@
+
+<div class="containersignup" ng-controller="RegisterController as Register">
+    <form novalidate="novalidate" name="RegisterForm">
+      <div class="row">
+        <h4 class="text-center"><img src="shared/images/appletsoftware.png" class="logo"></h4>
+        <div class="col-half">
+          <div class="input-group input-group-icon" ng-class="{'has-error':RegisterForm.txtfname.$dirty&&RegisterForm.txtfname.$invalid}">
+            <input type="text" name="txtfname" placeholder="First Name" 
+            ng-model="Register.FirstName" ng-minlength="5" ng-maxlength="15"
+             required="required" ng-class="{'has-error':RegisterForm.txtfname.$dirty&&RegisterForm.txtfname.$invalid}"/>
+             <div class="help-block" ng-messages="RegisterForm.txtfname.$error" ng-if="RegisterForm.txtfname.$dirty"style="color:maroon" role="alert">
+              
+              <ng-message when="required" translate>First Name is required *</ng-message>
+              <div ng-message="minlength">First Name at Least 5 charchters *</div>
+              <div ng-message="maxlength">First Name max size 15 charchters *</div>
+            </div>
+            <div class="input-icon"><i class="fa fa-user"></i></div>
+          </div>
+        
+        </div>
+        <div class="col-half">
+          <div class="input-group input-group-icon" ng-class="{'has-error':RegisterForm.txtlname.$dirty&&RegisterForm.txtlname.$invalid}">
+            <input type="text" placeholder="Last Name" name="txtlname" ng-model="Register.LastName" ng-minlength="5" ng-maxlength="15" required="required" />
+            <div class="help-block" ng-messages="RegisterForm.txtlname.$error" ng-if="RegisterForm.txtlname.$dirty"style="color:maroon" role="alert">
+              
+              <ng-message when="required" translate>Last Name is required *</ng-message>
+              <div ng-message="minlength">Last Name at Least 5 charchters *</div>
+              <div ng-message="maxlength">Last Name max size 15 charchters *</div>
+            </div>
+            <div class="input-icon"><i class="fa fa-user"></i></div>
+          </div>
+
+        </div>
+        
+        <div class="input-group input-group-icon" ng-class="{'has-error':RegisterForm.txtemail.$dirty&&RegisterForm.txtemail.$invalid}">
+          <input type="email" placeholder="Email Address" name="txtemail" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required="required" ng-model="Register.Email" ng-maxlength="30" />
+          
+          <div class="help-block" ng-messages="RegisterForm.txtemail.$error" ng-if="RegisterForm.txtemail.$dirty" style="color:maroon" role="alert" >
+             <ng-message when="required" translate="yes">Email is Required *</ng-message>
+             <ng-message when="pattern" translate="yes">example:person@yahoo.com *</ng-message>
+          </div>
+          <div class="input-icon"><i class="fa fa-envelope"></i></div>
+        </div>
+        <div class="input-group input-group-icon" ng-class="{'has-error':RegisterForm.txtpassword.$dirty&&RegisterForm.txtpassword.$invalid}">
+          <input type="password" placeholder="Password" name="txtpassword" ng-model="Register.Password" ng-minlength="8" ng-maxlength="15" ng-pattern="/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/" required="required"/>
+       
+          <div class="help-block" ng-messages="RegisterForm.txtpassword.$error" ng-if="RegisterForm.txtpassword.$dirty" role="alert" style="color: maroon;">
+
+            <ng-message when="required" translate="yes">Password is Required *</ng-message>
+            <ng-message when="minlength" translate="yes">Password at least 8 characters *</ng-message>
+            <ng-message when="maxlength" translate="yes">Password max size 15 characters *</ng-message>
+            <ng-message when="pattern" translate="yes">Password is weak *</ng-message>
+
+          </div>
+            
+          <div class="input-icon"><i class="fa fa-key"></i></div>
+
+        </div>
+      </div>
+      <div class="row">
+
+          <div class="input-group" ng-class="{'has-error':RegisterForm.txtdate.$dirty&&RegisterForm.txtdate.$invalid}">
+            <input type="date" placeholder="Birth Date" name="txtdate" ng-model="Register.BirthDate"  ng-pattern="/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/" required="required"/>
+       
+            <div class="help-block" ng-messages="RegisterForm.txtdate.$error" ng-if="RegisterForm.txtdate.$dirty" role="alert" style="color: maroon;">
+  
+              <ng-message when="required" translate="yes">Birth Date is Required *</ng-message>
+              
+              <ng-message when="pattern" translate="yes">Birth Date Example (02/13/2018) *</ng-message>
+  
+            </div>
+     
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-half">
+    
+          <div class="input-group">
+            <input type="radio" id="gender-male" checked="checked"  ng-model="Register.Gender" value="male"  name="gender" required="required"/>
+            <label for="gender-male">Male</label>
+            <input type="radio" id="gender-female" value="male"  ng-model="Register.Gender" name="gender" required="required"/>
+            <label for="gender-female">Female</label>
+          </div>
+            <div class="help-block" ng-messages="RegisterForm.gender.$error" ng-if="RegisterForm.gender.$dirty" role="alert" style="color: maroon;">
+              
+                          <ng-message when="required" translate="yes">Gender is Required *</ng-message>
+                          
+              
+                        </div>
+          
+         
+        </div>
+
+        <div class="col-half">
+
+          <div class="input-group">
+            <input type="radio" name="category" value="Student" id="cat-student" checked="checked" ng-model="Register.Category" required="required"/>
+            <label for="cat-student">Student</label>
+            <input type="radio" name="category" value="Instructor" id="cat-instructor" ng-model="Register.Category" required="required"/>
+            <label for="cat-instructor">Instructor</label>
+
+
+          </div>
+
+          <div class="help-block" ng-messages="RegisterForm.category.$error" ng-if="RegisterForm.category.$dirty" role="alert" style="color: maroon;">
+            
+                        <ng-message when="required" translate="yes">Gender is Required *</ng-message>
+                        
+            
+                      </div>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        
+        <div class="input-group ">
+         <button type="button" class="btn btn-register" ng-disabled="RegisterForm.$invalid" ng-click="Register.Register()">Create Account</button>
+        </div>
+      </div>
+
+      </div>
+
+
+    </form>
+  </div>

@@ -1,0 +1,149 @@
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li>
+                <a href="#!/dashboardemployees">Employees</a>
+                <span>«</span>
+            </li>
+            <li>
+               New Employee
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+
+<div class="inner_content_w3_agile_info two_in">
+    <h2 class="w3_inner_tittle"> New Employee</h2>
+
+    <!--/forms-->
+    <div class="forms-main_agileits" ng-controller="NewEmployeesController as Model">
+        <!--/forms-inner-->
+        <div class="forms-inner">
+            <!--/set-3-->
+
+            <div class="wthree_general">
+
+
+                <div class="grid-1 graph-form agile_info_shadow">
+
+                    <form class="form-horizontal" novalidate="novalidate" autocomplete="true" name="NewEmployeesForm">
+                        <div class="form-group">
+
+                            <div class="col-md-12 col-md-offset-0">
+                                <div class="input-group" ng-class="{'has-error':NewEmployeesForm.txtCrsName.$dirty&&NewEmployeesForm.txtCrsName.$invalid}">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-edit"></i>
+                                    </span>
+                                    <input type="text" name="txtempName" ng-model="Model.Employee_Name" ng-maxlength="120" required="required" ng-class="{'has-error':NewEmployeesForm.txtempName.$dirty&&NewEmployeesForm.txtempName.$invalid}"
+                                        class="form-control1 icon" placeholder="Employee Name">
+                                </div>
+                                <div class="help-block" ng-messages="NewEmployeesForm.txtempName.$error" ng-if="NewEmployeesForm.txtempName.$dirty" style="color:maroon"
+                                    role="alert">
+
+                                    <ng-message when="required" translate>Employees Name is required *</ng-message>
+
+                                    <div ng-message="maxlength">Employees Name max size 120 charchters *</div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-md-12 col-md-offset-0">
+                                <div class="input-group" ng-class="{'has-error':NewEmployeesForm.txtCrsName.$dirty&&NewEmployeesForm.txtCrsName.$invalid}">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-edit"></i>
+                                    </span>
+                                    <input type="phone" name="txtempphone" ng-model="Model.Employee_Phone" ng-maxlength="120" required="required" ng-class="{'has-error':NewEmployeesForm.txtempphone.$dirty&&NewEmployeesForm.txtempphone.$invalid}"
+                                        class="form-control1 icon" placeholder="Employee Phone">
+                                </div>
+                                <div class="help-block" ng-messages="NewEmployeesForm.txtempphone.$error" ng-if="NewEmployeesForm.txtempphone.$dirty" style="color:maroon"
+                                    role="alert">
+
+                                    <ng-message when="required" translate>Employees Phone is required *</ng-message>
+
+                                    <div ng-message="maxlength">Employees Phone max size 120 charchters *</div>
+                                </div>
+                            </div>
+                           
+
+                            </div>
+                                <div class="form-group">
+                                      
+
+                                    
+                            <div class="col-md-12 col-md-offset-0">
+                                <div class="input-group" ng-class="{'has-error':NewEmployeesForm.txtempsalary.$dirty&&NewEmployeesForm.txtempsalary.$invalid}">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-edit"></i>
+                                    </span>
+                                    <input type="number" name="txtempsalary" ng-model="Model.Employee_Salary" ng-maxlength="120" required="required" ng-class="{'has-error':NewEmployeesForm.txtempsalary.$dirty&&NewEmployeesForm.txtempsalary.$invalid}"
+                                        class="form-control1 icon" placeholder="Employee Salary">
+                                </div>
+                                <div class="help-block" ng-messages="NewEmployeesForm.txtempsalary.$error" ng-if="NewEmployeesForm.txtempsalary.$dirty" style="color:maroon"
+                                    role="alert">
+
+                                    <ng-message when="required" translate>Employees Salary is required *</ng-message>
+
+                                    <div ng-message="maxlength">Employees Salary max size 120 charchters *</div>
+                                </div>
+                            </div>
+            
+                                    </div>
+                                <div class="form-group">
+                            <div class="col-md-12 col-md-offset-0" ng-class="{'has-error':NewEmployeesForm.txtEmployeesPhoto.$dirty&&NewEmployeesForm.txtEmployeesPhoto.$invalid}">
+                                <link rel="stylesheet" href="../shared/css/fileinput.css">
+                                <!-- FONT AWESOME HIDDEN THUMBNAIL CONTENT THEME -->
+                                <!-- load the JS files in the right order -->
+                                <script src="shared/js/fileinput.js"></script>
+                                <script src="/shared/js/theme.js"></script>
+
+
+                                <div class="file-loading">
+                                    <input id="txtEmployeesPhoto" type="file" ng-model="Model.Employee_Photo" name="Model.Employee_Photo" >
+                                </div>
+                              
+                                <script>
+                                    $("#txtEmployeesPhoto").fileinput({
+                                        initialPreview: "/app/shared/images/access-application-business-360438.jpg",
+                                        uploadUrl: "http://localhost:50816" + "/api/Employees/UploadEmployeesImage",
+                                        initialPreviewAsData: true,
+                                        initialPreviewConfig: [{
+                                                caption: "SPARK SCHOOL",
+                                                width: "120px"
+                                            },
+
+                                        ],
+                                        overwriteInitial: true,
+                                        maxFileSize: 1200,
+                                        initialCaption: "Insert Employee Image",
+                                        showRemove: false,
+                                        showUpload: false
+
+                                    });
+                                </script>
+
+                                <div class="help-block" ng-messages="NewEmployeesForm.txtEmployeesPhoto.$error" ng-if="NewEmployeesForm.txtEmployeesPhoto.$dirty" style="color:maroon"
+                                role="alert">
+
+                                <ng-message when="required" translate>Employees Photo is required *</ng-message>
+
+                                </div>
+
+                                </div>
+</div>
+                        <div class="button">
+                            <p class="btnText">READY?</p>
+                            <div class="btnTwo">
+                                <button type="button" class="btnText2" ng-disabled="NewEmployeesForm.$invalid" ng-click="Model.Submit()">Save</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <!--//set-3-->
+        </div>
+        <!--//forms-inner-->
+    </div>
+    <!--//forms-->

@@ -1,0 +1,69 @@
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li>
+                <a href="#!/dashboardcoursescategories">Courses Categories</a>
+                <span>«</span>
+            </li>
+            <li>
+                Edit Category
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+
+<div class="inner_content_w3_agile_info two_in">
+    <h2 class="w3_inner_tittle"> Edit Category</h2>
+
+    <!--/forms-->
+    <div class="forms-main_agileits" ng-controller="EditCoursesCategoryController as Model" style="min-height:350px; ">
+        <!--/forms-inner-->
+        <div class="forms-inner">
+            <!--/set-3-->
+
+            <div class="wthree_general">
+
+
+                <div class="grid-1 graph-form agile_info_shadow">
+
+                    <form class="form-horizontal" novalidate="novalidate" autocomplete="true" name="EditCourseCategoryForm">
+                        <div class="form-group">
+
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="input-group" ng-class="{'has-error':EditCourseCategoryForm.txtCrsCategoryName.$dirty&&EditCourseCategoryForm.txtCrsCategoryName.$invalid}">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-edit"></i>
+                                    </span>
+                                    <input type="text" id="txtCrsCategoryName" name="txtCrsCategoryName" ng-model="Model.CrsCats_Name" ng-maxlength="100" required="required" ng-class="{'has-error':EditCourseCategoryForm.txtCrsCategoryName.$dirty&&EditCourseCategoryForm.txtCrsCategoryName.$invalid}"
+                                        class="form-control1 icon" placeholder="Course Category Name">
+                                </div>
+                                <div class="help-block" ng-messages="EditCourseCategoryForm.txtCrsCategoryName.$error" ng-if="EditCourseCategoryForm.txtCrsCategoryName.$dirty" style="color:maroon"
+                                    role="alert">
+
+                                    <ng-message when="required" translate>Course Category Name is required *</ng-message>
+
+                                    <div ng-message="maxlength">Course Category Name max size 100 charchters *</div>
+                                </div>
+                            </div>
+                         
+                        </div>
+               
+
+                        <div class="button">
+                            <p class="btnText">READY?</p>
+                            <div class="btnTwo">
+                                <button type="button" class="btnText2" ng-disabled="EditCourseCategoryForm.$invalid" ng-click="Model.Submit()">Save</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <!--//set-3-->
+        </div>
+        <!--//forms-inner-->
+    </div>
+    <!--//forms-->

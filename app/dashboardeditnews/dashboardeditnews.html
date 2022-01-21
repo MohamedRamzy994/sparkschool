@@ -1,0 +1,163 @@
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li>
+                <a href="#!/dashboardnews">News</a>
+                <span>«</span>
+            </li>
+            <li>
+               Edit News
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+
+<div class="inner_content_w3_agile_info two_in">
+    <h2 class="w3_inner_tittle">Edit News</h2>
+
+    <!--/forms-->
+    <div class="forms-main_agileits" ng-controller="EditNewsController as Model">
+        <!--/forms-inner-->
+        <div class="forms-inner">
+            <!--/set-3-->
+
+            <div class="wthree_general">
+
+
+                <div class="grid-1 graph-form agile_info_shadow">
+
+                    <form class="form-horizontal" novalidate="novalidate" autocomplete="true" name="NewNewsForm">
+                        <div class="form-group">
+
+                            <div class="col-md-6 col-md-offset-0">
+                                <div class="input-group" ng-class="{'has-error':NewNewsForm.txtCrsName.$dirty&&NewNewsForm.txtCrsName.$invalid}">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-edit"></i>
+                                    </span>
+                                    <input type="text" name="txtCrsName" ng-model="Model.News.News_Title" ng-maxlength="120" required="required" ng-class="{'has-error':NewNewsForm.txtCrsName.$dirty&&NewNewsForm.txtCrsName.$invalid}"
+                                        class="form-control1 icon" placeholder="News Title">
+                                </div>
+                                <div class="help-block" ng-messages="NewNewsForm.txtCrsName.$error" ng-if="NewNewsForm.txtCrsName.$dirty" style="color:maroon"
+                                    role="alert">
+
+                                    <ng-message when="required" translate>News Title is required *</ng-message>
+
+                                    <div ng-message="maxlength">News Title max size 120 charchters *</div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-md-6 col-md-offset-0">
+                              
+                                <div class="input-group" ng-class="{'has-error':NewNewsForm.drpNewsCategory.$dirty&&NewNewsForm.drpNewsCategory.$invalid}">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-align-justify"></i>
+                                    </span>
+                                    <select class="form-control" name="drpNewsCategory" ng-model="Model.News.Cat_Id" required="required">
+                                        <option value="">News Categories</option>
+                                        <option ng-repeat="Category in Model.NewsCategories" value="{{Category.Cat_Id}}">{{Category.Cat_Name}}</option>
+                                
+                                    </select>
+                                </div>
+                                <div class="help-block" ng-messages="NewNewsForm.drpNewsCategory.$error" ng-if="NewNewsForm.drpNewsCategory.$dirty" style="color:maroon"
+                                    role="alert">
+
+                                    <ng-message when="required" translate>News Category is required *</ng-message>
+
+                                </div>
+
+                            </div>
+                            </div>
+                            <div class="form-group">
+                                    <div class="col-md-12 col-md-offset-0" ng-class="{'has-error':NewNewsForm.News_Description.$dirty&&NewNewsForm.News_Description.$invalid}">
+        
+                                        <textarea name="News_Description" ng-model="Model.News_Description" ck-editor>News Description</textarea>
+                                        <!-- <script>
+                                            CKEDITOR.replace('News_Description');
+                                        </script> -->
+                                        <div class="help-block" ng-messages="NewNewsForm.News_Description.$error" ng-if="NewNewsForm.News_Description.$dirty" style="color:maroon"
+                                            role="alert">
+        
+                                            <ng-message when="required" translate>News Description is required *</ng-message>
+        
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                                <div class="form-group">
+                                        <div class="col-md-12 col-md-offset-0" ng-class="{'has-error':NewNewsForm.News_Content.$dirty&&NewNewsForm.News_Content.$invalid}">
+            
+                                            <textarea name="News_Content" ng-model="Model.News_Content" ck-editor>News Content</textarea>
+                                            <!-- <script>
+                                                CKEDITOR.replace('News_Content');
+                                            </script> -->
+                                            <div class="help-block" ng-messages="NewNewsForm.News_Content.$error" ng-if="NewNewsForm.News_Content.$dirty" style="color:maroon"
+                                                role="alert">
+            
+                                                <ng-message when="required" translate>News Content is required *</ng-message>
+            
+                                            </div>
+            
+                                        </div>
+            
+                                    </div>
+                                <div class="form-group">
+                            <div class="col-md-12 col-md-offset-0" ng-class="{'has-error':NewNewsForm.txtNewsPhoto.$dirty&&NewNewsForm.txtNewsPhoto.$invalid}">
+                                <link rel="stylesheet" href="../shared/css/fileinput.css">
+                                <!-- FONT AWESOME HIDDEN THUMBNAIL CONTENT THEME -->
+                                <!-- load the JS files in the right order -->
+                                <script src="shared/js/fileinput.js"></script>
+                                <script src="/shared/js/theme.js"></script>
+
+
+                                <div class="file-loading">
+                                    <input id="txtNewsPhoto" type="file" ng-model="Model.Crs_Photo" name="Model.Crs_Photo" >
+                                </div>
+                              
+                                <script>
+                                    $("#txtNewsPhoto").fileinput({
+                                        initialPreview: "/app/shared/images/access-application-business-360438.jpg",
+                                        uploadUrl: "http://localhost:50816" + "/api/News/UploadNewsIamge",
+                                        initialPreviewAsData: true,
+                                        initialPreviewConfig: [{
+                                                caption: "SPARK SCHOOL",
+                                                width: "120px"
+                                            },
+
+                                        ],
+                                        overwriteInitial: true,
+                                        maxFileSize: 1200,
+                                        initialCaption: "Insert your News Image",
+                                        showRemove: false,
+                                        showUpload: false
+
+                                    });
+                                </script>
+
+                                <div class="help-block" ng-messages="NewNewsForm.txtNewsPhoto.$error" ng-if="NewNewsForm.txtNewsPhoto.$dirty" style="color:maroon"
+                                role="alert">
+
+                                <ng-message when="required" translate>News Description is required *</ng-message>
+
+                                </div>
+
+                                </div>
+</div>
+                        <div class="button">
+                            <p class="btnText">READY?</p>
+                            <div class="btnTwo">
+                                <button type="button" class="btnText2" ng-disabled="NewNewsForm.$invalid" ng-click="Model.Submit()">Save</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <!--//set-3-->
+        </div>
+        <!--//forms-inner-->
+    </div>
+    <!--//forms-->

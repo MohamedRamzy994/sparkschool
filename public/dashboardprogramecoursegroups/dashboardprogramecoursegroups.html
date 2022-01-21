@@ -1,0 +1,164 @@
+<!-- breadcrumbs -->
+
+<section ng-controller="ProgrameCourseGroupsController as Model">
+    <div class="w3l_agileits_breadcrumbs">
+        <div class="w3l_agileits_breadcrumbs_inner">
+            <ul>
+                    <li>
+                            <li>
+                                    <a href="#!/dashboardprogrames">Programes</a>
+                            </li>
+                            <span>«</span>
+                        </li>
+              
+                <li>
+                    <li>
+                        <a>{{Model.Crs_Name}}</a>
+                    </li>
+                    <span>«</span>
+                </li>
+                <li>
+                    Groups
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //breadcrumbs -->
+    <div class="inner_content_w3_agile_info two_in">
+        <h2 class="w3_inner_tittle">{{Model.Crs_Name}}</h2>
+        <!-- tables -->
+
+        <div class="agile-tables">
+            <div class="w3l-table-info agile_info_shadow text-center">
+
+
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" />
+                            </th>
+                            <th>Name</th>
+
+                            <th>Time</th>
+                            <th>Instructor</th>
+
+                            <th>Active</th>
+
+                            <th>Management</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                      <tr ng-repeat="Group in Model.Groups.slice(((Model.currentPage-1)*Model.itemsPerPage), ((Model.currentPage)*Model.itemsPerPage))|orderBy:'-Crs_DateTime'|limitTo:10" ng-style="{'background-color':Select === true ? '#ff4f57' : '','color':Select === true ? '#fff' : ''}">
+             
+                            <td>
+                                <input type="checkbox" class="btn btn-success" value="{{Group.Group_Id}}" ng-model="Select" />
+                            </td>
+                            <td>{{Group.Group_Name}}</td>
+                            <td>
+                                <ul>
+
+                                    <li ng-repeat="Time in Group.AspNetProgrameCourseGroupsTimes">
+                                        {{Time.Group_Time|date:'medium'}}
+
+                                    </li>
+                                 
+
+                                </ul>
+
+
+
+                            </td>
+
+                            <td>
+                                    <ul>
+    
+                                        <li ng-repeat="Instructor in Group.AspNetProgrameCourseGroupsInstructors">
+                                            {{Instructor.Group_Instructor_Name}}
+    
+                                        </li>
+                                        
+    
+                                    </ul>
+    
+    
+    
+                                </td>
+                                <td><button ng-class="Group.Group_Active==false?'btn btn-warning':'btn btn-success'" ng-click="Model.Activate(Group.Group_Id)"><i class="fa fa-check"></i></button></td>
+                            <td class="text-center">
+                                <a href="#!/dashboardnewprogramecoursegroup/{{Model.Crs_Id}}">
+                                    <button type="button" class="btn btn-info">
+                                        <i class="fa fa-plus-circle"></i>
+                                    </button>
+                                </a>
+                                <a href="#!/dashboardeditcoursegroup/{{Group.Group_Id}}">
+                                    <button type="button" class="btn btn-success">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </a>
+                                <button type="button" class="btn btn-danger" ng-click="Model.Confirm(Group.Group_Id)">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+
+                            </td>
+                        </tr>
+
+                        <tr ng-show="(Model.Groups).length == 0"
+                            role="alert" style="color: maroon;">
+                            <td colspan="9" class="text-center">
+
+
+                                <span class="glyphicon glyphicon-remove"></span>
+
+
+                                <div ng-class="{'alert alert-warning text-center':(Model.Groups).length == 0}">Sorry no results found !
+                                    <a ng-href="#!/dashboardnewprogramecoursegroup/{{Model.Crs_Id}}" class="btn btn-primary">New Group</a>
+                                </div>
+
+                            </td>
+
+
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <ul uib-pagination total-items="Model.totalItems" ng-model="Model.currentPage" ng-change="Model.pageChanged()" class="pagination-sm"
+                    items-per-page="Model.itemsPerPage"></ul>
+
+            </div>
+
+
+            <!-- //tables -->
+        </div>
+</section>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#table').basictable();
+
+          $('#table-breakpoint').basictable({
+            breakpoint: 768
+          });
+
+          $('#table-swap-axis').basictable({
+            swapAxis: true
+          });
+
+          $('#table-force-off').basictable({
+            forceResponsive: false
+          });
+
+          $('#table-no-resize').basictable({
+            noResize: true
+          });
+
+          $('#table-two-axis').basictable();
+
+          $('#table-max-height').basictable({
+            tableWrapper: true
+          });
+    });
+</script>

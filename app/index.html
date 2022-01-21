@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SPARK SCHOOL</title>
+  <base href="/index.html">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ------------------------- Css files------------------------------------- -->
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="shared/css/style.css">
+  <link type="text/css" rel="icon" href="shared/images/appletsoftware.png" />
+  <!-- stylesheets of Bootstrap  css -->
+  <link rel="stylesheet" href="shared/css/bootstrap.min.css" />
+
+  <!-- Animate Css -->
+  <link rel="stylesheet" href="shared/css/animate.min.css" />
+
+  <!-- Libarary of font Awesome -->
+  <link rel="stylesheet" href="shared/css/font-awesome.css" />
+
+  <!-- Hover Css -->
+  <link rel="stylesheet" href="shared/css/hover-min.css" />
+
+  <!-- Small Slider -->
+  <link rel="stylesheet" href="shared/css/flexslider.css" />
+
+  <!-- For Vido -->
+  <link rel="stylesheet" href="shared/css/YouTubePopUp.css" />
+
+  <!-- Fancybox For shared/images -->
+  <link rel="stylesheet" href="shared/css/jquery.fancybox.min.css" />
+
+  <!-- My Style CSS -->
+  <link rel="stylesheet" href="shared/css/style.css" />
+  <link rel="stylesheet" href="shared/css/jopStyle2.css">
+
+  <!--Full Loader -->
+  <link href="shared/css/fakeLoader.css" rel="stylesheet" type="text/css" />
+
+  <!-- My Media CSS -->
+  <link rel="stylesheet" href="shared/css/media.css" />
+  <link rel="stylesheet" href="shared/css/loading-bar.css">
+
+
+
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="shared/engine2/style.css" />
+  <link rel="stylesheet" href="bower_components/angularjs-toaster/toaster.css">
+  <!-- ------------------------- Js files------------------------------------- -->
+
+  <script type="text/javascript" src="shared/engine2/jquery.js"></script>
+
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="shared/js/loading-bar.js"></script>
+  <script src="bower_components/angularjs-toaster/toaster.js"></script>
+  <!-- Component Controllers -->
+  <script src="app.js"></script>
+  <script src="shared/AuthenticationBearerToken.js"></script>
+  <script src="register/register.js"></script>
+  <script src="login/login.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50" ng-cloak>
+
+
+  <div id="fakeLoader"></div>
+  <toaster-container toaster-options="{'close-button': true , 'position-class': 'toast-top-full-width'}"></toaster-container>
+  <!-- ------------------------------------------Start Header-------------------------------------------- -->
+
+  <navbar-directive></navbar-directive>
+
+  <!-- ------------------------------------------ Start Navbar ---------------------------------------------- -->
+
+  <nav class="navbar navbar-default">
+
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav indexnav">
+
+          <li class="drop-down">
+            <a href="#!/allcourses">Courses
+              <img ng-src="shared/images/arrow-down-white.png"> </a>
+          </li>
+        
+          <li class=" drop-down">
+            <a href="#!/allprogrames">Programes
+              <img ng-src="shared/images/arrow-down-white.png">
+            </a>
+          </li>
+        
+
+          <li class=" drop-down">
+            <a href="#!/events"> Gallary
+              <img ng-src="shared/images/arrow-down-white.png">
+            </a>
+          </li>
+
+          <li class="drop-down">
+            <a href="#!/news"> News
+              <img ng-src="shared/images/arrow-down-white.png"> </a>
+          </li>
+          <li class="drop-down">
+            <a href="#!/jobs"> Jobs
+              <img ng-src="shared/images/arrow-down-white.png"> </a>
+          </li>
+          <li class=" drop-down">
+            <a> About
+              <img ng-src="shared/images/arrow-down-white.png">
+            </a>
+          </li>
+          <div class="dropcontainer1 xx">
+            <div class=" row drpcontain">
+              <div class="col-md-3" id="socialmedia">
+                <h3>
+                  Quick Links
+                </h3>
+                <ul class="dm-ul">
+                  <li>
+                    <a href="#!/allcourses">
+                      <i class="fa fa-facebook"></i> Facebook</a>
+                  </li>
+                  <li>
+                    <a href="#!/allcourses">
+                      <i class="fa fa-twitter"></i> Twitter </a>
+                  </li>
+
+                  <li>
+                    <a href="#!/staff">
+                      <i class="fa fa-instagram"></i> Instagram</a>
+                  </li>
+                  <li>
+                    <a href="#!/news">
+                      <i class="fa fa-google-plus"></i> Google</a>
+                  </li>
+                  <li>
+                    <a href="#!/news">
+                      <i class="fa fa-whatsapp"></i> Whatsapp</a>
+                  </li>
+                  <li>
+                    <a href="#!/news">
+                      <i class="fa fa-linkedin"></i> Linkedin</a>
+                  </li>
+                  <li>
+                    <a href="#!/news">
+                      <i class="fa fa-reddit"></i> Reddit</a>
+                  </li>
+                  <li>
+                    <a href="#!/news">
+                      <i class="fa fa-pinterest"></i> Pinterest</a>
+                  </li>
+                  <li>
+                    <a href="#!/news">
+                      <i class="fa fa-tumblr"></i> Pinterest</a>
+                  </li>
+                  <li>
+                    <a href="#!/news">
+                      <i class="fa fa-angellist"></i> AngelList</a>
+                  </li>
+                  <li>
+                    <a href="#!/news">
+                      <i class="fa fa-behance"></i> Behance</a>
+                  </li>
+                  <li>
+                    <a href="#!/news">
+                      <i class="fa fa-digg"></i> Digg</a>
+                  </li>
+                  <li>
+                    <a href="#!/news">
+                      <i class="fa fa-rss"></i> RSS</a>
+                  </li>
+                </ul>
+                <br>
+                <button class="view-btn">
+                  <a>View All Courses</a>
+                </button>
+              </div>
+
+              <div class="col-md-9">
+
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a  aria-controls="staff" role="tab" data-toggle="tab">Staff</a>
+                  </li>
+                 
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="staff">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="staff">
+                          <p>
+                            <img ng-src="shared/images/teacher-small.jpg" alt=""> </p>
+                          <h5> Ms. Annie Ann
+                            <i>Management</i>
+                          </h5>
+                          <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas
+                            ut sit, mea ea ullum epicurei.</p>
+
+                          <a class="readmore-btn" href="about.html">Read More </a>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="staff">
+                          <p>
+                            <img ng-src="shared/images/teacher-small-2.jpg" alt=""> </p>
+                          <h5> Ms. Annie Ann
+                            <i>Management</i>
+                          </h5>
+                          <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas
+                            ut sit, mea ea ullum epicurei.</p>
+
+                          <a class="readmore-btn" href="about.html">Read More </a>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="staff">
+                          <p>
+                            <img ng-src="shared/images/teacher-small-3.jpg" alt=""> </p>
+                          <h5> Ms. Annie Ann
+                            <i>Management</i>
+                          </h5>
+                          <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas
+                            ut sit, mea ea ullum epicurei.</p>
+
+                          <a class="readmore-btn" href="about.html">Read More </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <li class=" drop-down hidden-md">
+            <a> Contacts
+              <img ng-src="shared/images/arrow-down-white.png">
+            </a>
+          </li>
+          <div class="dropcontainer1 xx">
+            <div class=" row drpcontain">
+              <div class="col-md-6">
+                <iframe style="height:350px; width:100%; border:0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2482.336900888852!2d-0.18850530000000001!3d51.52538029999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x10d04b6d1a254faa!2sMaida+Vale+Library!5e0!3m2!1sit!2sit!4v1410245771307"></iframe>
+              </div>
+
+              <div class="col-md-6">
+                <div>
+
+                  <h4>
+                    <b>Address</b>
+                  </h4>
+
+                  <p>
+                    <span class="fa fa-home"></span> 11 Fifth Ave, Loftus - NEW JERSEY, US </p>
+
+                  <p>
+                    <span class="fa fa-phone"></span> Telephone: + 61 (2) 8093 3400 </p>
+
+                  <p>
+                    <span class="fa fa-phone"></span> Fax: +61 (2) 9542 3599 </p>
+
+                  <p>
+                    <span class="fa fa-envelope"></span> Email:
+                    <a>Applet@domain.com</a>
+                  </p>
+
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div>
+                      <h5>Questions</h5>
+                      <p>
+                        An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.
+                      </p>
+
+                      <button class="readmore-btn">
+                        <a>Read More </a>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div>
+                      <h5>Apply Now</h5>
+                      <p>
+                        An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.
+                      </p>
+
+                      <button class="readmore-btn">
+                        <a>Contact Us </a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </ul>
+
+      </div>
+
+    </div>
+    <!-- /.container -->
+  </nav>
+
+
+  <!-- -------------------------------------End  Navbar ------------------------------------------------ -->
+  <!-- -------------------------------------ٍStart body-content ------------------------------------------------ -->
+
+  <div ng-view></div>
+
+
+  <!-- ------------------------------------ End  body-content ---------------------------------------------- -->
+  <!-- ------------------------------------ Start  Footer ---------------------------------------------- -->
+  <footer>
+    <div class="container">
+      <div class=" row">
+        <div class="col-md-4 d-logo">
+          <a>
+            <img ng-src="shared/images/appletsoftware.png" class="logo" alt="logo" title="APPLET Software Academy">
+          </a>
+          <p>
+            <b>Copyright &copy; 2017</b>
+          </p>
+          <button class="btn btn-info twit">
+            <a>
+              <b>
+                <span class="fa fa-twitter "></span> Follow On Twitter</b>
+            </a>
+          </button>
+          <button class="btn btn-primary face">
+            <a>
+              <b>
+                <span class="fa fa-facebook-square"></span> Follow On FaceBook</b>
+            </a>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <div>
+            <h4>
+              <b>Contacts</b>
+            </h4>
+
+            <p>
+              <span class="fa fa-home"></span>
+              <b> 11 Fifth Ave, Loftus - NEW JERSEY, US </b>
+            </p>
+
+            <p>
+              <span class="fa fa-phone"></span>
+              <b> Telephone: + 61 (2) 8093 3400 </b>
+            </p>
+
+            <p>
+              <span class="fa fa-phone"></span>
+              <b> Fax: +61 (2) 9542 3599 </b>
+            </p>
+
+            <p>
+              <span class="fa fa-envelope"></span>
+              <b> Email:
+                <a>Applet@domain.com</a>
+              </b>
+            </p>
+          </div>
+          <hr>
+          <div>
+            <h4>
+              <b>Newsletter</b>
+            </h4>
+            <p>
+              An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.
+            </p>
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </span>
+              <input type="text" class="form-control" placeholder="Type your Email.">
+            </div>
+            <!-- /input-group -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h4>
+            <b> Quik Links</b>
+          </h4>
+          <ul class="dm-ul">
+            <li>
+              <a href="allcourses.html">All Courses</a>
+            </li>
+            <li>
+              <a href="coursedetails.html">Courses Details </a>
+            </li>
+            <li>
+              <a>Meet Team</a>
+            </li>
+            <li>
+              <a href="applycourse.html">Apply for a Courses</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+          </ul>
+          <hr>
+          <ul class="dm-ul">
+            <li>
+              <a href="allcourses.html">All Courses</a>
+            </li>
+            <li>
+              <a href="coursedetails.html">Courses Details </a>
+            </li>
+            <li>
+              <a>Meet Team</a>
+            </li>
+            <li>
+              <a href="applycourse.html">Apply for a Courses</a>
+            </li>
+            <li>
+              <a href="admin.html/">Dashboard</a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- -------------------------------------End  footer ------------------------------------------------ -->
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+
+  <!-- -------------------------------------------------------------------------------------------------- -->
+
+
+  <script src="shared/js/jquery-3.2.1.min.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="shared/js/bootstrap.min.js"></script>
+
+  <!-- Slide Show shared/images #Home  -->
+  <script src="shared/js/jquery.backstretch.min.js"></script>
+
+  <!-- Small Slider -->
+  <script src="shared/js/jquery.flexslider-min.js"></script>
+
+  <!-- YouTubePopUp plugin -->
+  <script src="shared/js/YouTubePopUp.jquery.js"></script>
+
+  <!-- fancybox plugin -->
+  <script src="shared/js/jquery.fancybox.min.js"></script>
+
+  <!-- <script src="js/jquery.scrollTo.min.js"></script> -->
+
+  <!-- nicescroll plugin -->
+  <script src="shared/js/jquery.nicescroll.min.js"></script>
+
+  <script src="shared/js/wow.min.js"></script>
+
+  <script>
+    new WOW().init();
+  </script>
+  <script src="shared/js/fakeLoader.js"></script>
+
+
+  <!-- Java Script Code -->
+  <script src="shared/js/myCode.js"></script>
+
+  <!--        -->
+
+
+
+</body>
+
+</html>

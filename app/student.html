@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="StudentApp">
+
+<head>
+  <title>SPARK SCHOOL</title>
+  <!-- custom-theme -->
+  <base href="/student.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link type="text/css" rel="icon" href="shared/images/appletsoftware.png" />
+  <script type="application/x-javascript">
+    addEventListener("load", function () {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+  </script>
+  <!-- //custom-theme -->
+  <link href="shared/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="shared/css/component.css" rel="stylesheet" type="text/css" media="all" />
+
+  <link href="shared/css/style_grid.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="shared/css/style-dash.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" type="text/css" href="shared/css/table-style.css" />
+  <link rel="stylesheet" type="text/css" href="shared/css/basictable.css" />
+  <link rel="stylesheet" href="shared/css/loading-bar.css">
+  <link rel="stylesheet" href="bower_components/angularjs-toaster/toaster.css">
+  <link rel="stylesheet" href="bower_components/angular-confirm/dist/angular-confirm.min.css">
+  <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+  <link rel="stylesheet" href="bower_components/angular-moment-picker/dist/angular-moment-picker.css">
+  <!-- font-awesome-icons -->
+  <link href="shared/css/font-awesome-dash.css" rel="stylesheet">
+
+  <!-- //font-awesome-icons -->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+
+
+  <script type="text/javascript" src="shared/js/jquery-2.1.4.min.js"></script>
+  <script src="shared/js/Chart.min.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+<!-- Start AngularJS WorkStation -->
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angularjs-toaster/toaster.js"></script>
+  <script src="shared/js/loading-bar.js"></script>
+  <script src="bower_components/ng-file-input/dist/ng-file-input.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-moment-picker/moment-with-locales.js"></script>
+  <script src="bower_components/angular-moment-picker/dist/angular-moment-picker.js"></script>
+  <script src="student.js"></script>
+  <script src="studentindex/studentindex.js"></script>
+  <script src="studentcourses/studentcourses.js"></script>
+  <script src="studentanalytics/studentanalytics.js"></script>
+  <script src="studentsettings/studentsettings.js"></script>
+
+
+
+<!-- End AngularJS WorkStation -->
+
+<script src="bower_components/angular-confirm/dist/angular-confirm.min.js"></script>
+
+  <!-- <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script> -->
+  <script src="ckeditor/ckeditor.js"></script>
+ 
+  
+  <script src="shared/js/modernizr.custom.js"></script>
+
+  <script src="shared/js/jquery.basictable.min.js"></script>
+  <!-- script-for-menu -->
+  <!-- //js -->
+  <script src="shared/js/screenfull.js"></script>
+  <script>
+    $(function () {
+      $('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+      if (!screenfull.enabled) {
+        return false;
+      }
+
+
+
+      $('#toggle').click(function () {
+        screenfull.toggle($('#container')[0]);
+      });
+    });
+  </script>
+  <script src="shared/js/jquery.nicescroll.js"></script>
+ 
+  <script type="text/javascript" src="shared/js/bootstrap-3.1.1.min.js"></script>
+  
+
+</head>
+
+<body>
+    <toaster-container toaster-options="{'close-button': true , 'position-class': 'toast-top-full-width'}"></toaster-container>
+  <div class="wthree_agile_admin_info">
+    <!-- /w3_agileits_top_nav-->
+    <!-- /nav-->
+    <div class="w3_agileits_top_nav">
+      <ul id="gn-menu" class="gn-menu-main">
+        <!-- /nav_agile_w3l -->
+        <li class="gn-trigger">
+          <a class="gn-icon gn-icon-menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <span>Menu</span>
+          </a>
+      
+        </li>
+        <!-- //nav_agile_w3l -->
+        <li class="second logo">
+          <h1>
+            <a href="index.html/">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i>APPLET-CO </a>
+          </h1>
+        </li>
+        <li class="second admin-pic">
+          <ul class="top_dp_agile">
+            <li class="dropdown profile_details_drop">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <div class="profile_img">
+                  <span class="prfil-img">
+                    <img src="shared/images/admin.jpg" alt=""> </span>
+                </div>
+              </a>
+           
+            </li>
+
+          </ul>
+        </li>
+        <li class="second top_bell_nav">
+          <ul class="top_dp_agile ">
+            <li class="dropdown head-dpdn">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                <span class="badge blue">4</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="notification_header">
+                    <h3>Your Notifications</h3>
+                  </div>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="user_img">
+                      <img src="shared/images/a3.jpg" alt="">
+                    </div>
+                    <div class="notification_desc">
+                      <h6>John Smith</h6>
+                      <p>Lorem ipsum dolor</p>
+                      <p>
+                        <span>1 hour ago</span>
+                      </p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li class="odd">
+                  <a href="">
+                    <div class="user_img">
+                      <img src="shared/images/a1.jpg" alt="">
+                    </div>
+                    <div class="notification_desc">
+                      <h6>Jasmin Leo</h6>
+                      <p>Lorem ipsum dolor</p>
+                      <p>
+                        <span>3 hour ago</span>
+                      </p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="user_img">
+                      <img src="shared/images/a2.jpg" alt="">
+                    </div>
+                    <div class="notification_desc">
+                      <h6>James Smith</h6>
+                      <p>Lorem ipsum dolor</p>
+                      <p>
+                        <span>2 hour ago</span>
+                      </p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="user_img">
+                      <img src="shared/images/a4.jpg" alt="">
+                    </div>
+                    <div class="notification_desc">
+                      <h6>James Smith</h6>
+                      <p>Lorem ipsum dolor</p>
+                      <p>
+                        <span>1 hour ago</span>
+                      </p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <div class="notification_bottom">
+                    <a href="">See all Notifications</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+        <li class="second top_bell_nav">
+          <ul class="top_dp_agile ">
+            <li class="dropdown head-dpdn">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <span class="badge blue">3</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="notification_header">
+                    <h3>Your Messages</h3>
+                  </div>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="user_img">
+                      <img src="shared/images/a3.jpg" alt="">
+                    </div>
+                    <div class="notification_desc">
+                      <h6>John Smith</h6>
+                      <p>Lorem ipsum dolor</p>
+                      <p>
+                        <span>3 hour ago</span>
+                      </p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li class="odd">
+                  <a href="">
+                    <div class="user_img">
+                      <img src="shared/images/a1.jpg" alt="">
+                    </div>
+                    <div class="notification_desc">
+                      <h6>Jasmin Leo</h6>
+                      <p>Lorem ipsum dolor</p>
+                      <p>
+                        <span>2 hour ago</span>
+                      </p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="user_img">
+                      <img src="shared/images/a2.jpg" alt="">
+                    </div>
+                    <div class="notification_desc">
+                      <h6>James Smith</h6>
+                      <p>Lorem ipsum dolor</p>
+                      <p>
+                        <span>1 hour ago</span>
+                      </p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </a>
+                </li>
+                <li>
+                  <div class="notification_bottom">
+                    <a href="">See all Messages</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+        <li class="second top_bell_nav">
+          <ul class="top_dp_agile ">
+            <li class="dropdown head-dpdn">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-tasks"></i>
+                <span class="badge blue">9</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="notification_header">
+                    <h3>You have 4 Pending tasks</h3>
+                  </div>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="task-info">
+                      <span class="task-desc">Database update</span>
+                      <span class="percentage">40%</span>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="progress progress-striped active">
+                      <div class="bar yellow" style="width:40%;"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="task-info">
+                      <span class="task-desc">Dashboard done</span>
+                      <span class="percentage">90%</span>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="progress progress-striped active">
+                      <div class="bar green" style="width:90%;"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="task-info">
+                      <span class="task-desc">Mobile App</span>
+                      <span class="percentage">33%</span>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="progress progress-striped active">
+                      <div class="bar red" style="width: 33%;"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="task-info">
+                      <span class="task-desc">Issues fixed</span>
+                      <span class="percentage">80%</span>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="progress progress-striped active">
+                      <div class="bar  blue" style="width: 80%;"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <div class="notification_bottom">
+                    <a href="">See all pending tasks</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="second w3l_search">
+
+          <form action="" method="post">
+            <input type="search" name="search" placeholder="Search here..." required="">
+            <button class="btn btn-default" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+
+        </li>
+        <li class="second full-screen">
+          <section class="full-top">
+            <button id="toggle">
+              <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+            </button>
+          </section>
+        </li>
+
+      </ul>
+      <!-- //nav -->
+
+    </div>
+
+
+
+    <div class="clearfix"></div>
+    <!-- //w3_agileits_top_nav-->
+    <div class="inner_content">
+        <section class="teacher-index-layout">
+            <div class="row">
+        
+                <div class="col-md-4">
+                    <nav class="customeBox">
+        
+                        <ul>
+                                <li>
+                      <i class="fa fa-arrow-circle-down nav_icon "></i><span class="nav-label">Main Menu</span>
+                                    </li>
+                            <li ng-class="studentNameActive?'activetab':' '">
+                                    <a href="#!/studentindex" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon "></i><span class="nav-label">Jhone Mart</span> </a>
+                                </li>
+                               
+                              
+                                 <li  ng-class="studentCoursesActive?'activetab':' '">
+                                    <a href="#!/studentcourses" class=" hvr-bounce-to-right"><i class="fa fa-home nav_icon"></i> <span class="nav-label">Instructor Courses</span> </a>
+                                </li>
+
+                                 <li  ng-class="studentAnalyticsActive?'activetab':' '">
+                                    <a href="#!/studentanalytics" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon"></i> <span class="nav-label">Analytics</span> </a>
+                                </li>
+                                <li  ng-class="studentSettingsActive?'activetab':' '">
+                                        <a href="#!/studentsettings" class=" hvr-bounce-to-right"><i class="fa fa-gear nav_icon"></i> <span class="nav-label">Settings</span> </a>
+                                    </li>
+                                    <li  ng-class="studentLogoffActive?'activetab':' '">
+                                            <a href="" class=" hvr-bounce-to-right"><i class="fa fa-sign-out nav_icon"></i> <span class="nav-label">Log Off</span> </a>
+                                        </li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-8">
+                    <section class="customContainer col-md-12" ng-view>
+                        
+                        
+                       
+                       
+        
+        
+        
+        
+                    </section>
+        
+        
+                </div>
+        
+            </div>
+        
+        </section>
+
+
+
+    </div>
+
+  </div>
+
+
+  <div class="copyrights">
+    <p>© 2017 APPLET Software . All Rights Reserved | Design by
+      <a href="" target="_blank">APPLET Software</a>
+    </p>
+  </div>
+
+ 
+  <!--skycons-icons-->
+  <script src="shared/js/skycons.js"></script>
+
+  
+  <!--//skycons-icons-->
+ <script src="shared/js/scripts.js"></script>
+</body>
+
+</html>
