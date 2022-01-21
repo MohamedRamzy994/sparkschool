@@ -12,8 +12,8 @@ bower install ng-file-input --save
 ##### Add script to HTML
 
 ```
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/ng-file-input/dist/ng-file-input.js"></script>
+<script src="bowercomponents/angular/angular.js"></script>
+<script src="bowercomponents/ng-file-input/dist/ng-file-input.js"></script>
 ````
 
 ##### Import in your module definition

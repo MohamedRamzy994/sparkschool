@@ -5,8 +5,8 @@ var ghPages = require('gulp-gh-pages');
 gulp.task('deploy', function() {
     gulp.src('./app/**/*')
         .pipe(gulp.dest('.tmp'));
-    gulp.src('./bower_components/**/*')
-        .pipe(gulp.dest('.tmp/bower_components'));
+    gulp.src('./bowercomponents/**/*')
+        .pipe(gulp.dest('.tmp/bowercomponents'));
     
     return gulp.src('.tmp/**/*')
         .pipe(ghPages());
@@ -19,7 +19,7 @@ gulp.task('default',function(){
     server: {
       baseDir: ['app'],
       routes: {
-        '/bower_components': 'bower_components'
+        '/bowercomponents': 'bowercomponents'
       }
     }
   });

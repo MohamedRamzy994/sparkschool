@@ -29,7 +29,7 @@ bower install angular-messages
 Add a `<script>` to your `index.html`:
 
 ```html
-<script src="/bower_components/angular-messages/angular-messages.js"></script>
+<script src="/bowercomponents/angular-messages/angular-messages.js"></script>
 ```
 
 Then add `ngMessages` as a dependency for your app:

@@ -32,7 +32,7 @@ bower install angular-loader
 Add a `<script>` to your `index.html`:
 
 ```html
-<script src="/bower_components/angular-loader/angular-loader.js"></script>
+<script src="/bowercomponents/angular-loader/angular-loader.js"></script>
 ```
 
 ## Documentation

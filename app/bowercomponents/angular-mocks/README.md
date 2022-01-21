@@ -31,7 +31,7 @@ angular.module('myMod', [
 bower install angular-mocks
 ```
 
-The mocks are then available at `bower_components/angular-mocks/angular-mocks.js`.
+The mocks are then available at `bowercomponents/angular-mocks/angular-mocks.js`.
 
 ## Documentation
 

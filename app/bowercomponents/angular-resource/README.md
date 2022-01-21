@@ -29,7 +29,7 @@ bower install angular-resource
 Add a `<script>` to your `index.html`:
 
 ```html
-<script src="/bower_components/angular-resource/angular-resource.js"></script>
+<script src="/bowercomponents/angular-resource/angular-resource.js"></script>
 ```
 
 Then add `ngResource` as a dependency for your app:
