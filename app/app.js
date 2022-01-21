@@ -109,7 +109,7 @@ app.config([
   }
 ]).constant("appsettings",{
   
-      serverPath:"http://localhost:50816",
+      serverPath:"https://localhost:44376",
       routePath:"http://localhost:8000"
   
     })
