@@ -59,11 +59,11 @@ app.config([
             var accessToken =  localStorage.getItem("accessToken");
             if (accessToken) {
 
-              window.location.href =appsettings.routePath+"/index.html#!/home";
+              window.location.href =appsettings.routePath+"/#!/home";
               window.location.reload();
             }
             else {
-              window.location.href = appsettings.routePath+"/index.html#!/register";
+              window.location.href = appsettings.routePath+"/#!/register";
 
 
             }
@@ -80,11 +80,11 @@ app.config([
             var accessToken =  localStorage.getItem("accessToken");
             if (accessToken) {
 
-              window.location.href = appsettings.routePath+"/index.html#!/home";
+              window.location.href = appsettings.routePath+"/#!/home";
               window.location.reload();
             }
             else {
-              window.location.href =  appsettings.routePath+"/index.html#!/login";
+              window.location.href =  appsettings.routePath+"/#!/login";
 
 
             }
